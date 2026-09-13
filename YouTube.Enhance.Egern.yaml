@@ -1,0 +1,140 @@
+name: YouTube & Music 增强
+description: >-
+  YouTube 去广告、精简底栏、画中画、后台播放及字幕翻译；
+  YouTube Music 精简底栏、后台播放及歌词翻译。
+  配套 Egern 原生适配脚本由本仓库提供。
+author: Maasea + DualSubs；Egern 原生接口适配
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+
+# SCRIPT_BASE 指向本仓库配套 scripts 目录，不是原始 Loon 脚本目录。
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts
+compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可使用本地目录或 HTTPS 地址。
+
+# default_value 仅是 UI 占位提示；真正的默认值在配套原生脚本中提供。
+env_schema:
+  captionLang:
+    name: YouTube 字幕翻译
+    description: 目标语言；off 关闭。视频本身必须提供字幕。
+    default_value: zh-Hans
+    options: [zh-Hans, zh-Hant, en, ja, ko, 'off']
+  blockUpload:
+    name: 移除上传按钮
+    default_value: 'true'
+    options: ['true', 'false']
+  blockImmersive:
+    name: 移除 Music 选段按钮
+    default_value: 'true'
+    options: ['true', 'false']
+  blockShorts:
+    name: 移除 Shorts 按钮
+    default_value: 'true'
+    options: ['true', 'false']
+  lyricsEnabled:
+    name: YouTube Music 歌词翻译
+    default_value: 'true'
+    options: ['true', 'false']
+  Type:
+    name: DualSubs 字幕处理类型
+    description: 保留上游兼容参数；建议保持 Official。
+    default_value: Official
+    options: [Official, Translate]
+  Types:
+    name: 歌词类型
+    description: Translate 使用机器翻译；Official 不注入机器翻译子类型。
+    default_value: Translate
+    options: [Translate, Official]
+  Position:
+    name: 歌词顺序
+    description: Forward 原文在前；Reverse 译文在前。
+    default_value: Forward
+    options: [Forward, Reverse]
+  Vendor:
+    name: 歌词翻译服务
+    default_value: Google
+    options: [Google, Microsoft]
+  AutoCC:
+    name: DualSubs 自动字幕参数
+    description: 保留原插件参数；本模组仅将它传给歌词 browse 处理，不控制 Maasea 的视频自动字幕。
+    default_value: 'true'
+    options: ['true', 'false']
+  ShowOnly:
+    name: 歌词仅显示译文
+    default_value: 'false'
+    options: ['true', 'false']
+  debug:
+    name: 增强脚本调试日志
+    default_value: 'false'
+    options: ['true', 'false']
+  LogLevel:
+    name: 翻译日志等级
+    default_value: WARN
+    options: [WARN, 'OFF', ERROR, INFO, DEBUG, ALL]
+
+map_locals:
+  - match: '(?i)^https?://(?:www|s)\.youtube\.com/(?:api/stats/ads|pagead/|ptracking(?:\?|/))'
+    status_code: 200
+    body: ''
+  - match: '(?i)^https?://s\.youtube\.com/api/stats/qoe\?.*\badcontext\b'
+    status_code: 200
+    body: ''
+
+scriptings:
+  - http_request:
+      name: YouTube 空广告图片
+      match: '(?i)^https?://[\w-]+\.googlevideo\.com/initplayback(?:\?.*)?&oad(?:[=&]|$)'
+      script_url: '{{{SCRIPT_BASE}}}/reject-image.js'
+      body_required: false
+      timeout: 5
+  - http_response:
+      name: YouTube 增强响应
+      match: '(?i)^https://youtubei\.googleapis\.com/youtubei/v1/(?!browse\?.*\bsubtype=Translate\b)(?:browse|next|player|search|reel/reel_watch_sequence|guide|account/get_setting|get_watch|log_event|config)(?:\?.*)?$'
+      script_url: '{{{SCRIPT_BASE}}}/youtube.response.js'
+      body_required: true
+      binary_body: true
+      max_size: 10485760
+      timeout: 30
+  - http_request:
+      name: YouTube 播放初始化
+      match: '(?i)^https?://[\w-]+\.googlevideo\.com/initplayback(?:\?.*)?&ack(?:[=&]|$)'
+      script_url: '{{{SCRIPT_BASE}}}/youtube.request.js'
+      body_required: true
+      binary_body: true
+      max_size: 10485760
+      timeout: 30
+  - http_request:
+      name: YouTube 事件净化
+      match: '(?i)^https://youtubei\.googleapis\.com/youtubei/v1/log_event(?:\?.*)?$'
+      script_url: '{{{SCRIPT_BASE}}}/youtube.request.js'
+      body_required: true
+      binary_body: true
+      max_size: 10485760
+      timeout: 30
+  - http_request:
+      name: YouTube Music 歌词请求
+      match: '(?i)^https://youtubei\.googleapis\.com/youtubei/v1/browse(?:\?.*)?$'
+      script_url: '{{{SCRIPT_BASE}}}/lyrics.request.js'
+      body_required: true
+      binary_body: true
+      max_size: 10485760
+      timeout: 30
+  - http_response:
+      name: YouTube Music 歌词翻译
+      match: '(?i)^https://youtubei\.googleapis\.com/youtubei/v1/browse\?.*\bsubtype=Translate\b'
+      script_url: '{{{SCRIPT_BASE}}}/lyrics.response.js'
+      body_required: true
+      binary_body: true
+      max_size: 10485760
+      timeout: 30
+
+mitm:
+  hostnames:
+    includes:
+      - youtubei.googleapis.com
+      - www.youtube.com
+      - s.youtube.com
+      - music.youtube.com
+      - '*.googlevideo.com'
+    excludes:
+      - 'redirector*.googlevideo.com'
