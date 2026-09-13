@@ -1,0 +1,63 @@
+name: 豆瓣开屏去广告
+description: 去除豆瓣 App 自有及腾讯优量汇开屏广告，并拦截对应广告素材。
+author: shengrui123
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: app.badge.fill
+
+rules:
+  # 腾讯 HTTPDNS：阻止广告 SDK 将域名解析为 IP 后绕过域名规则。
+  - ip_cidr:
+      match: 119.29.29.90/32
+      policy: REJECT
+      no_resolve: true
+  - ip_cidr:
+      match: 119.29.29.98/32
+      policy: REJECT
+      no_resolve: true
+  - ip_cidr:
+      match: 119.29.29.99/32
+      policy: REJECT
+      no_resolve: true
+  # 腾讯优量汇广告链。
+  - domain:
+      match: sdk.e.qq.com
+      policy: REJECT
+  - domain_suffix:
+      match: gdt.qq.com
+      policy: REJECT
+  - domain_suffix:
+      match: gdtimg.com
+      policy: REJECT
+  - domain_suffix:
+      match: ugdtimg.com
+      policy: REJECT
+  - domain:
+      match: pgdt.gtimg.cn
+      policy: REJECT
+  - domain:
+      match: qzs.qq.com
+      policy: REJECT
+
+url_rewrites:
+  # 展示阶段返回失败，让 App 执行广告加载失败回调。
+  - match: '^https?://api\.douban\.com/v\d+/app_ads/splash_show(?:[/?].*)?$'
+    location: http://reject/
+  # 阻止开屏配置及素材预加载，返回空 JSON 避免反复重试。
+  - match: '^https?://api\.douban\.com/v\d+/app_ads/splash(?:_preload)?(?:[/?].*)?$'
+    location: http://reject-dict/
+  # 腾讯优量汇 URL 兜底。
+  - match: '^https?://sdk\.e\.qq\.com/(?:activate|launch)(?:[/?].*)?$'
+    location: http://reject/
+  - match: '^https?://mi\.gdt\.qq\.com/gdt_mview\.fcg(?:\?.*)?$'
+    location: http://reject/
+  # 豆瓣开屏广告素材。
+  - match: '^https?://img\d+\.doubanio\.com/view/dale-online/dale_ad/public/.*$'
+    location: http://reject/
+
+mitm:
+  hostnames:
+    includes:
+      - api.douban.com
+      - 'img*.doubanio.com'
+      - sdk.e.qq.com
+      - mi.gdt.qq.com

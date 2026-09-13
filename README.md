@@ -1,8 +1,31 @@
-# YouTube & Music 增强 · Egern
+# Egern 模组
+
+本仓库收录 Egern 原生 YAML 模组。
+
+## 模组列表
+
+| 模组 | 功能 | 订阅地址 |
+| --- | --- | --- |
+| 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
+| YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
+
+## 安装
+
+1. 在 Egern 的「工具 → 模组」中添加上表对应的 YAML 原始文件 URL。
+2. 安装并完全信任 Egern 的 MITM CA 证书。
+3. 启用模组后重新打开相应 App。
+
+## 豆瓣开屏去广告
+
+模组按实际抓包规则阻断豆瓣开屏配置、展示回调、广告素材与腾讯优量汇广告链。腾讯 HTTPDNS 入口也被拦截，避免广告 SDK 用 IP 绕过域名规则。
+
+请勿与其他处理相同豆瓣接口的去广告模组同时启用。当 App 更换广告接口或 SDK 时，规则可能需要更新。
+
+## YouTube & Music 增强
 
 按 2026-09-13 查询到的 Egern 官方文档转换，包含一个 YAML 模组和五个配套 JavaScript 文件。不是把 Loon 配置换扩展名：四个上游脚本均封装成 `export default async function(ctx)`，通过 `ctx.env`、`ctx.storage`、`ctx.http` 和原生返回值运行。
 
-## 安装
+### 安装与设置
 
 模组已经指向本仓库的配套脚本，可直接使用以下地址导入：
 
@@ -18,7 +41,7 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.
 
 如需镜像到自己的仓库，请同时复制 YAML 和 `scripts` 目录，并将 `SCRIPT_BASE` 改为新仓库中 `scripts` 的完整 HTTPS 地址。
 
-## 默认行为和范围
+### 默认行为和范围
 
 - 视频字幕目标为简体中文；关闭字幕翻译选 `captionLang: off`。
 - 移除上传、Music 选段和 Shorts 底栏入口；歌词翻译开启，Google 翻译，原文在前，同时显示译文。
@@ -29,7 +52,7 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.
 - 主体处理上限明确设为 10 MiB，超出部分不处理；脚本超时 30 秒，适配层在 28 秒时尝试原样放行。
 - 保留原插件的广告匹配、HTTP 200 空响应及 1×1 图片返回，并将 `redirector*.googlevideo.com` 放进 MITM 排除列表。
 
-## 上游依赖
+### 上游依赖
 
 本包固定了转换时下载的脚本快照，不会在每次拦截时下载或执行新的远程代码。更新上游需要重新生成配套脚本；Egern 的资源刷新不会自动把这些快照升级为上游最新版。
 
@@ -41,7 +64,7 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.
 
 保留上游 protobuf 和翻译逻辑；Maasea 实例初始化补入 `debug` 参数。原脚本已有的 `init-stream.maasea.workers.dev` 播放处理依赖和外部翻译服务也被保留，因此相应功能仍依赖这些服务可用。
 
-## 验证范围
+### 验证范围
 
 已完成 YAML 解析、全部脚本路径检查、正则编译、普通响应与翻译响应互斥检查，以及 Node 模拟 Egern ctx 的脚本测试：protobuf / JSON 歌词请求、普通 browse、关闭歌词、Official 类型、歌词响应入口、事件请求主体、空播放器 protobuf、GIF 返回。
 
@@ -54,3 +77,7 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.
 - https://egernapp.com/docs/configuration/env/
 - https://egernapp.com/docs/javascript-api/
 - https://egernapp.com/docs/configuration/example/
+
+## Telegram 更新通知
+
+`main` 分支上线新模组或更新现有模组及其配套脚本时，GitHub Actions 会自动向 Telegram 频道发布通知。详见 [TELEGRAM.md](TELEGRAM.md)。
