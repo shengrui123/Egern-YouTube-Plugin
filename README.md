@@ -6,6 +6,7 @@
 
 | 模组 | 功能 | 订阅地址 |
 | --- | --- | --- |
+| 12306 去广告 | 过滤应用内推广及开屏广告字段 | [12306.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/12306.RemoveAds.Egern.yaml) |
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
 | 航旅纵横净化 | 清理开屏、推广、榜单及部分会员入口 | [Umetrip.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml) |
@@ -17,6 +18,33 @@
 1. 在 Egern 的「工具 → 模组」中添加上表对应的 YAML 原始文件 URL。
 2. 安装并完全信任 Egern 的 MITM CA 证书。
 3. 启用模组后重新打开相应 App。
+
+## 12306 去广告
+
+模组参考 RuCu6 与可莉发布的 Loon 插件转换。广告列表使用 Egern 原生响应 JQ 删除开屏相关字段；应用内推广请求使用原生请求脚本读取 `operation-type`，命中已知操作时调用 `ctx.abort()` 中止。
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/12306.RemoveAds.Egern.yaml
+```
+
+当前处理范围：
+
+- 删除 `ad.12306.cn/ad/ser/getAdList` 响应顶层的 `materialsList` 和 `advertParam`。
+- 拦截活动横幅、铁路会员常见问题、首页热门资讯、商品信息流及支付成功页商业推广请求。
+- 保留原插件对 `ad.12306.cn` 使用 `DIRECT` 的行为，以便广告响应能够到达 JQ 净化阶段。
+- 未列入的 `operation-type` 原样放行，避免影响登录、购票、订单、支付等其他请求。
+- 接口或请求头名称变化后可能失效；尚未进行 Egern / 铁路 12306 真机验证。
+- 请勿与其他处理相同接口的 12306 去广告模组同时启用。验证时不要进行不必要的实际购票或支付。
+
+来源与规范：
+
+- 参考插件：https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx
+- 原脚本作者：https://github.com/RuCu6/QuanX
+- Egern 模组：https://egernapp.com/docs/configuration/modules/
+- Egern 消息体重写：https://egernapp.com/docs/configuration/body_rewrites/
+- Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
 
 ## 彩云天气净化
 

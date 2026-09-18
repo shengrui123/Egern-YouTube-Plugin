@@ -1,0 +1,35 @@
+name: 12306 去广告
+description: 过滤铁路 12306 App 内已知推广请求，并移除广告列表及开屏广告字段。
+author: RuCu6、可莉（原插件）；shengrui123（Egern 适配）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+open_url: https://apps.apple.com/app/id564818797
+icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/12306.png
+
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts
+compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可使用本地目录或 HTTPS 地址。
+
+# 保持原插件的 DIRECT 行为，使广告接口仍能返回并由下方 JQ 净化。
+rules:
+  - domain:
+      match: ad.12306.cn
+      policy: DIRECT
+
+body_rewrites:
+  - response_jq:
+      match: '^https://ad\.12306\.cn/ad/ser/getAdList(?:\?|$)'
+      filter: 'if type == "object" then del(.materialsList, .advertParam) else . end'
+
+scriptings:
+  - http_request:
+      name: 12306 应用内推广拦截
+      match: '^https://mobile\.12306\.cn/otsmobile/app/mgs/mgw\.htm(?:\?|$)'
+      script_url: '{{{SCRIPT_BASE}}}/railway12306.request.js'
+      body_required: false
+      timeout: 10
+
+mitm:
+  hostnames:
+    includes:
+      - ad.12306.cn
+      - mobile.12306.cn
