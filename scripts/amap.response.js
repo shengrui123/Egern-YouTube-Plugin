@@ -212,6 +212,13 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "Naviendpage_Searchwords",
     "SplashScreenControl",
     "TipsTaxiButton", // 选路线页面 打车图标
+    "aiNativeV16", // 底部 AI 对话入口
+    "aiNative1520",
+    "ai_agent_enter_style_cursor",
+    "ai_scenes",
+    "aiNativeRC06",
+    "plan_ai",
+    "ai_native_smart_island",
     "amapCoin",
     "favorites_info", // 收藏夹顶部横图推广
     "feedback_banner", // 店主专属通道
@@ -225,6 +232,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "hotel_tipsicon",
     "hotsaleConfig", // 酒店限时抢购
     "landing_page_info", // 发现吃喝玩乐好去处
+    "llm", // AI 对话底层配置，需要使用禁用状态
     "map_weather_switch", // 天气
     "maplayers", // 赏花地图
     "navi_end", // 导航结束 领油滴
@@ -266,7 +274,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   if (obj?.data) {
     for (let i of items) {
       if (obj?.data?.[i]) {
-        obj.data[i] = { status: 1, version: "", value: "" };
+        obj.data[i] = { status: i === "llm" ? 2 : 1, version: "", value: "" };
       }
     }
   }

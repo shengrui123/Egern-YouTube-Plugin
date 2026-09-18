@@ -1,5 +1,5 @@
 name: 高德地图去广告
-description: 过滤高德地图开屏广告、搜索与路线推广、导航结束页内容、打车页营销，并精简首页及“我的”页面。
+description: 过滤高德地图开屏广告、搜索与路线推广、导航结束页内容、打车页营销，关闭底部 AI 对话与打车入口的远程配置，并精简首页及“我的”页面。
 author: RuCu6、kelv1n1n（原脚本）；shengrui123（Egern 适配）
 homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
 open_url: https://apps.apple.com/app/id461703208
@@ -103,7 +103,7 @@ map_locals:
 scriptings:
   - http_response:
       name: 高德地图广告与界面净化
-      match: '^https://(?:m5\.amap\.com/ws/(?:aos/perception/publicTravel/beforeNavi|bus/plan/integrate|c3frontend/(?:af-(?:hotel|launch)/page/main|af-nearby/nearby)|perception/drive/(?:routeInfo|routePlan)|shield/(?:search_bff/hotword|search_poi/(?:mps|search/sp|sug|tips_operation_location)|frogserver/aocs/updatable/1|dsp/profile/index/nodefaasv3|search/nearbyrec_smart)|faas/amap-navigation/(?:card-service-plan-home|main-page)|valueadded/alimama/splash_screen)|m5-zb\.amap\.com/ws/(?:boss/(?:car/order/content_info|order_web/friendly_information)|promotion-web/resource(?:/home)?)|(?:info|m5)\.amap\.com/ws/shield/search/(?:common/coupon/info|poi/detail))(?:\?.*)?$'
+      match: '^https://(?:m5\.amap\.com/ws/(?:aos/perception/publicTravel/beforeNavi|bus/plan/integrate|c3frontend/(?:af-(?:hotel|launch)/page/main|af-nearby/nearby)|perception/drive/(?:routeInfo|routePlan)|shield/(?:search_bff/hotword|search_poi/(?:mps|search/sp|sug|tips_operation_location)|frogserver/aocs/updatable/[^?]+|dsp/profile/index/nodefaasv3|search/nearbyrec_smart)|faas/amap-navigation/(?:card-service-plan-home|main-page)|valueadded/alimama/splash_screen)|m5-zb\.amap\.com/ws/(?:boss/(?:car/order/content_info|order_web/friendly_information)|promotion-web/resource(?:/home)?)|(?:info|m5)\.amap\.com/ws/shield/search/(?:common/coupon/info|poi/detail))(?:\?.*)?$'
       script_url: '{{{SCRIPT_BASE}}}/amap.response.js'
       body_required: true
       max_size: 10485760
