@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | 12306 去广告 | 过滤应用内推广及开屏广告字段 | [12306.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/12306.RemoveAds.Egern.yaml) |
 | 支付宝小程序开屏去广告 | 清空小程序广告推荐并拦截广告管理素材 | [Alipay.MiniApp.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Alipay.MiniApp.SplashAds.Egern.yaml) |
+| 高德地图去广告 | 清理开屏、搜索、路线、导航及打车页推广 | [Amap.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Amap.RemoveAds.Egern.yaml) |
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
 | 航旅纵横净化 | 清理开屏、推广、榜单及部分会员入口 | [Umetrip.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml) |
@@ -74,6 +75,32 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Alipay.M
 - 公开规则参考：https://github.com/xingjian2566/Surge/blob/main/AD/Module/Alipay.sgmodule
 - Egern 模组与 Map Local：https://egernapp.com/docs/configuration/modules/ 与 https://egernapp.com/docs/configuration/example/
 - Egern URL 重写：https://egernapp.com/docs/configuration/url_rewrites/
+
+## 高德地图去广告
+
+模组参考 RuCu6、kelv1n1n 与可莉维护的 Loon 插件转换，使用 Egern 原生规则、Body Rewrite、Map Local 和 `ctx` 响应脚本。
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Amap.RemoveAds.Egern.yaml
+```
+
+当前处理范围：
+
+- 移除开屏、搜索热词与搜索结果推广、路线规划和导航结束页推广、酒店及附近页推广。
+- 清理首页卡片、活动图层、天气与消息推广，并精简“我的”页面。
+- 清理打车页营销皮肤、优惠弹窗、红点、天气图标和订单推荐卡片。
+- 保留登录卡片、继续导航、常去地点、关联车辆位置和订单卡片等源脚本明确保留的功能。
+- 域名及接口规则沿用源插件的精确范围；尚未进行 Egern / 高德地图真机验证。导航或打车前建议先验证常用路线，请勿同时启用其他高德去广告模组。
+
+来源与规范：
+
+- 参考插件：https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
+- 原脚本来源：https://github.com/RuCu6/Loon
+- Egern 模组：https://egernapp.com/docs/configuration/modules/
+- Egern URL 重写与 Map Local：https://egernapp.com/docs/configuration/url_rewrites/ 与 https://egernapp.com/docs/configuration/example/
+- Egern 脚本与 API：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
 
 ## 彩云天气净化
 

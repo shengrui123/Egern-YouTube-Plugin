@@ -1,0 +1,115 @@
+name: 高德地图去广告
+description: 过滤高德地图开屏广告、搜索与路线推广、导航结束页内容、打车页营销，并精简首页及“我的”页面。
+author: RuCu6、kelv1n1n（原脚本）；shengrui123（Egern 适配）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+open_url: https://apps.apple.com/app/id461703208
+icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Amap.png
+
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts
+compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可使用本地目录或 HTTPS 地址。
+
+rules:
+  - and:
+      match:
+        - url_regex:
+            match: '^http://.+/amdc/mobileDispatch'
+        - user_agent:
+            match: 'AMapiPhone*'
+      policy: REJECT
+  - domain:
+      match: amap-aos-info-nogw.amap.com
+      policy: REJECT
+  - domain:
+      match: free-aos-cdn-image.amap.com
+      policy: REJECT
+  - domain_suffix:
+      match: v.smtcdns.com
+      policy: REJECT
+  # 防止 HTTP/3 绕过 HTTPS 解密规则。
+  - and:
+      match:
+        - domain_suffix:
+            match: amap.com
+        - protocol:
+            match: quic
+      policy: REJECT
+
+body_rewrites:
+  - response_jq:
+      match: '^https://m5\.amap\.com/ws/shield/search_business/process/marketingOperationStructured\?'
+      filter: 'del(.data.commonMaterial, .data.tipsOperationLocation, .data.resourcePlacement)'
+  - response_jq:
+      match: '^https://m5\.amap\.com/ws/shield/search_poi/homepage\?'
+      filter: 'del(.history_tags)'
+  - response_jq:
+      match: '^https://m5-zb\.amap\.com/ws/sharedtrip/taxi/order_detail_car_tips\?'
+      filter: 'del(.data.carTips.data.popupInfo)'
+
+map_locals:
+  - match: '^https://m5\.amap\.com/ws/shield/search/new_hotword\?'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://m5\.amap\.com/ws/faas/amap-navigation/card-service-(?:car-end|route-plan)(?:\?.*)?$'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://m5\.amap\.com/ws/shield/search_poi/tips_adv\?'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://oss\.amap\.com/ws/banner/lists/\?'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://m5\.amap\.com/ws/aos/main/page/product/list\?'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://m5\.amap\.com/ws/faas/amap-navigation/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc/homeV2)(?:\?.*)?$'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://m5\.amap\.com/ws/(?:mapapi/hint_text/offline_data|message/notice/list|shield/search/new_hotword)(?:\?.*)?$'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://m5\.amap\.com/ws/shield/scene/recommend\?'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://m5\.amap\.com/ws/valueadded/weather/v2\?'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://sns\.amap\.com/ws/msgbox/pull_mp\?'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://ai\.amap\.com/v1/ai_rec/home_qs\?'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://m5-zb\.amap\.com/ws/boss/(?:order/car/(?:feedback/get_card_questions|feedback/viptips|king_toolbox_car_bubble|remark/satisfactionConf|rights_information)|tips/onscene_visual_optimization)(?:\?.*)?$'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+  - match: '^https://m5-zb\.amap\.com/ws/boss/(?:pay/web/paySuccess/info/request|transportation/diversion/resource/driving)(?:\?.*)?$'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
+
+scriptings:
+  - http_response:
+      name: 高德地图广告与界面净化
+      match: '^https://(?:m5\.amap\.com/ws/(?:aos/perception/publicTravel/beforeNavi|bus/plan/integrate|c3frontend/(?:af-(?:hotel|launch)/page/main|af-nearby/nearby)|perception/drive/(?:routeInfo|routePlan)|shield/(?:search_bff/hotword|search_poi/(?:mps|search/sp|sug|tips_operation_location)|frogserver/aocs/updatable/1|dsp/profile/index/nodefaasv3|search/nearbyrec_smart)|faas/amap-navigation/(?:card-service-plan-home|main-page)|valueadded/alimama/splash_screen)|m5-zb\.amap\.com/ws/(?:boss/(?:car/order/content_info|order_web/friendly_information)|promotion-web/resource(?:/home)?)|(?:info|m5)\.amap\.com/ws/shield/search/(?:common/coupon/info|poi/detail))(?:\?.*)?$'
+      script_url: '{{{SCRIPT_BASE}}}/amap.response.js'
+      body_required: true
+      max_size: 10485760
+      timeout: 15
+
+mitm:
+  hostnames:
+    includes:
+      - '*.amap.com'
