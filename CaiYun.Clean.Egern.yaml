@@ -1,0 +1,36 @@
+name: 彩云天气净化
+description: >-
+  去除彩云天气已知广告与推广，隐藏旧接口 AI 标签；
+  保留旧版会员响应伪装（需登录且版本不高于 7.20.2）。
+author: ddgksf2013（原规则及逻辑）；shengrui123（Egern 适配）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: cloud.sun.fill
+
+# 配套脚本使用 Egern 原生 JavaScript API，不直接执行 Loon/Surge 脚本。
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts
+compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可使用本地目录或 HTTPS 地址。
+
+url_rewrites:
+  # 原 Loon 规则的 reject(200)，按广告接口的 JSON 语义返回空对象。
+  - match: '^https?://ad\.cyapi\.cn/v\d+(?:[/?].*)?$'
+    location: http://reject-dict/
+
+scriptings:
+  - http_response:
+      name: 彩云天气响应净化
+      match: '^https?://(?:biz\.(?:cyapi\.cn|caiyunapp\.com)/(?:api/v\d+/user_detail|v\d+/user(?:[/?]|$)|p/v\d+/vip_info(?:[/?]|$))|wrapper\.cyapi\.cn/v\d+/activity(?:[/?]|$)|api\.caiyunapp\.com/v\d+/activity(?:[/?]|$)|starplucker\.cyapi\.cn/v\d+/(?:operation/(?:homefeatures|feeds|banners|features)|notification/message_center|config/cypage|campaigns)(?:[/?]|$))'
+      script_url: '{{{SCRIPT_BASE}}}/caiyun.response.js'
+      body_required: true
+      max_size: 2097152
+      timeout: 10
+
+mitm:
+  hostnames:
+    includes:
+      - ad.cyapi.cn
+      - biz.cyapi.cn
+      - biz.caiyunapp.com
+      - wrapper.cyapi.cn
+      - api.caiyunapp.com
+      - starplucker.cyapi.cn

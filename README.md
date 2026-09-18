@@ -6,6 +6,7 @@
 
 | 模组 | 功能 | 订阅地址 |
 | --- | --- | --- |
+| 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
 | 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
 
@@ -14,6 +15,32 @@
 1. 在 Egern 的「工具 → 模组」中添加上表对应的 YAML 原始文件 URL。
 2. 安装并完全信任 Egern 的 MITM CA 证书。
 3. 启用模组后重新打开相应 App。
+
+## 彩云天气净化
+
+模组按 Egern 当前原生 YAML 与 JavaScript API 转换，配套脚本使用 `export default async function(ctx)`、`ctx.request`、`ctx.response` 和原生响应返回值，不依赖 Loon/Surge 的 `$request`、`$response` 或 `$done`。
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml
+```
+
+功能与限制：
+
+- 保留源插件的广告接口拦截、活动与首页推广清理、消息中心与雨季弹窗清理、发现页过滤，以及 AI 标签关闭响应。
+- 保留源插件的本地会员响应伪装，并兼容补充的 `vip_info` 接口；它不产生真实订阅，也不能保证服务端付费功能可用。
+- 原作者限定会员逻辑需要登录且彩云天气版本不高于 7.20.2；新版 Pro 或接口结构变化后可能失效。
+- 配套脚本对缺失字段及无效 JSON 做了保护；尚未在 Egern / 彩云天气真机环境验证。
+- 请勿与其他处理相同彩云天气接口的去广告或会员脚本同时启用。
+
+来源与规范：
+
+- 源插件：https://raw.githubusercontent.com/shengrui123/Loon-YouTube-Plugin/refs/heads/main/CaiYun.Clean.Loon.plugin
+- 原规则及脚本：https://github.com/ddgksf2013/Rewrite 与 https://github.com/ddgksf2013/Scripts
+- Egern 模组：https://egernapp.com/docs/configuration/modules/
+- Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
+- Egern URL 重写：https://egernapp.com/docs/configuration/url_rewrites/
 
 ## 豆瓣开屏去广告
 
