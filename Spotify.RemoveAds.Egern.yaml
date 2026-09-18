@@ -1,0 +1,58 @@
+name: Spotify 去广告与界面修复
+description: >-
+  移除已知播放广告请求，恢复歌手与专辑列表展示，并提供底栏创建按钮和 Apple 接力设置。
+  不包含 Premium、离线播放或其他付费权益伪装。
+author: 001ProMax（原插件）；shengrui123（Egern 安全适配）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+open_url: https://apps.apple.com/app/id324684580
+icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Spotify.png
+
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts
+compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可使用本地目录或 HTTPS 地址。
+
+# default_value 只作为设置页占位提示；配套脚本内另有相同的默认值。
+env_schema:
+  removeCreateTab:
+    name: 移除底栏创建按钮
+    description: 修改后需要重新登录 Spotify 才可能生效。
+    default_value: 'false'
+    options: ['true', 'false']
+  userActivity:
+    name: 启用 Apple 设备接力
+    description: 修改后需要重新登录 Spotify 才可能生效。
+    default_value: 'true'
+    options: ['true', 'false']
+
+# 强制 Spotify 回退到可被 HTTPS 解密处理的 TCP 连接。
+rules:
+  - and:
+      match:
+        - domain_suffix:
+            match: spotify.com
+        - protocol:
+            match: quic
+      policy: REJECT
+
+url_rewrites:
+  - match: '^https://(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?/pendragon/(?:.*)?$'
+    location: http://reject-dict/
+  # Header 模式：透明改写为 iPad 平台响应，用于恢复歌手与专辑列表展示。
+  - match: '^https://(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?/artistview/v1/artist/(.*)&platform=iphone(.*)$'
+    location: 'https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad$2'
+
+scriptings:
+  - http_response:
+      name: Spotify 广告与界面配置
+      match: '^https://(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?/(?:bootstrap|user-customization-service)(?:[/?].*)?$'
+      script_url: '{{{SCRIPT_BASE}}}/spotify.response.js'
+      body_required: true
+      binary_body: true
+      max_size: 10485760
+      timeout: 10
+
+mitm:
+  hostnames:
+    includes:
+      - '*-spclient.spotify.com'
+      - spclient.wg.spotify.com
