@@ -1,0 +1,155 @@
+name: 哔哩哔哩去广告
+description: >-
+  移除哔哩哔哩开屏、首页、动态、搜索、评论区与直播间广告，净化部分界面，
+  并提供可选空降助手。会员状态、后台播放、投屏及其他付费权益伪装不在本模组内。
+author: kokoryh（原脚本）；shengrui123（Egern 安全适配）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+open_url: https://apps.apple.com/app/id736536022
+icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
+
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts
+compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可使用本地目录或 HTTPS 地址。
+
+# default_value 只作为设置页占位提示；配套脚本内另有相同默认值。
+env_schema:
+  displayUpList:
+    name: 动态页最常访问
+    description: auto 为仅有直播时显示；show 为始终显示；hide 为始终隐藏。
+    default_value: auto
+    options: [auto, show, hide]
+  purifyComment:
+    name: 过滤置顶评论广告
+    default_value: 'true'
+    options: ['true', 'false']
+  optimizeRequest:
+    name: 优化评论区加载
+    description: 清理请求链路中的广告模块；遇到评论异常时可关闭。
+    default_value: 'true'
+    options: ['true', 'false']
+  sponsorBlock:
+    name: 空降助手
+    description: 使用 bsbsb.top 与 kokoryh/chronos 的第三方数据，可能不准确或失效。
+    default_value: 'false'
+    options: ['true', 'false']
+  purifyWebpage:
+    name: 净化直播活动网页
+    default_value: 'true'
+    options: ['true', 'false']
+  logLevel:
+    name: 日志等级
+    default_value: error
+    options: [off, error, warn, info, debug]
+
+rules:
+  - domain:
+      match: api.biliapi.com
+      policy: REJECT
+  - domain:
+      match: app.biliapi.com
+      policy: REJECT
+  - domain:
+      match: api.biliapi.net
+      policy: REJECT
+  - domain:
+      match: app.biliapi.net
+      policy: REJECT
+  - and:
+      match:
+        - domain_suffix:
+            match: chat.bilibili.com
+        - or:
+            match:
+              - domain_keyword:
+                  match: stun
+              - domain_keyword:
+                  match: tracker
+              - domain_keyword:
+                  match: p2p
+      policy: REJECT
+  # 强制相关接口回退到可被 HTTPS 解密处理的 TCP/HTTP2。
+  - and:
+      match:
+        - domain_suffix:
+            match: bilibili.com
+        - protocol:
+            match: quic
+      policy: REJECT
+  - and:
+      match:
+        - domain_suffix:
+            match: biliapi.net
+        - protocol:
+            match: quic
+      policy: REJECT
+
+url_rewrites:
+  - match: '^https://line3-h5-mobile-api\.biligame\.com/game/live/large_card_material\?'
+    location: http://reject-dict/
+  - match: '^https://api\.live\.bilibili\.com/xlive/e-commerce-interface/v1/ecommerce-user/get_shopping_info\?'
+    location: http://reject-dict/
+
+map_locals:
+  - match: '^https://app\.bilibili\.com/x/v2/splash/list\?'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{"code":0,"message":"OK","ttl":1,"data":{"max_time":0,"min_interval":31536000,"pull_interval":31536000,"keep_ids":[],"show":[],"list":[{}],"splash_request_id":""}}'
+  - match: '^https://ap[ip]\.bilibili\.com/x/(?:resource/(?:top/activity|patch/tab(?:/v2)?)|v2/search/square|vip/ads/materials)\?'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{"code":-404,"message":"-404","ttl":1,"data":null}'
+  - match: '^https://api\.bilibili\.com/pgc/activity/deliver/material/receive\?'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{"code":0,"data":{"closeType":"close_win","container":[],"showTime":""},"message":"success"}'
+
+scriptings:
+  - http_request:
+      name: 哔哩哔哩 gRPC 本地响应
+      match: '^https://grpc\.biliapi\.net/bilibili\.app\.interface\.v1\.(?:Teenagers/ModeStatus|Search/DefaultWords)$'
+      script_url: '{{{SCRIPT_BASE}}}/bilibili.mock.request.js'
+      timeout: 10
+  - http_request:
+      name: 哔哩哔哩 Protobuf 请求净化
+      match: '^https://(?:grpc\.biliapi\.net|app\.bilibili\.com)/bilibili\.(?:community\.service\.dm\.v1\.DM/DmSegMobile|app\.viewunite\.v1\.View/View|main\.community\.reply\.v1\.Reply/MainList)$'
+      script_url: '{{{SCRIPT_BASE}}}/bilibili.protobuf.request.js'
+      body_required: true
+      binary_body: true
+      max_size: 10485760
+      timeout: 15
+  - http_response:
+      name: 哔哩哔哩 JSON 广告净化
+      match: '^https://(?:app\.bilibili\.com/x/(?:resource/show/(?:tab/v2|skin)|v2/(?:splash/(?:show|event/list2)|feed/index(?:/story)?))|api\.bilibili\.com/(?:x/pd-proxy/tracker|pgc/(?:view/v2/app/season|page/channel))|api\.live\.bilibili\.com/xlive/(?:open-interface/v2/tracker/conf|app-interface/v2/index/feed|app-room/v1/index/getInfoBy(?:Room|User)))\?'
+      script_url: '{{{SCRIPT_BASE}}}/bilibili.json.response.js'
+      body_required: true
+      max_size: 10485760
+      timeout: 10
+  - http_response:
+      name: 哔哩哔哩 Protobuf 广告净化
+      match: '^https://(?:grpc\.biliapi\.net|app\.bilibili\.com)/bilibili\.(?:app\.(?:show\.v1\.Popular/Index|dynamic\.v2\.Dynamic/DynAll|view\.v1\.View/(?:View|ViewProgress|RelatesFeed)|viewunite\.v1\.View/(?:View|ViewProgress|RelatesFeed|AIRelateAsync))|polymer\.app\.search\.v1\.Search/SearchAll|community\.service\.dm\.v1\.DM/DmView|main\.community\.reply\.v1\.Reply/MainList)$'
+      script_url: '{{{SCRIPT_BASE}}}/bilibili.protobuf.response.js'
+      body_required: true
+      binary_body: true
+      max_size: 10485760
+      timeout: 15
+  - http_response:
+      name: 哔哩哔哩直播活动网页净化
+      match: '^https://(?:live|www)\.bilibili\.com/blackboard/era/.+\.html\?'
+      script_url: '{{{SCRIPT_BASE}}}/bilibili.webpage.response.js'
+      body_required: true
+      max_size: 10485760
+      timeout: 10
+
+mitm:
+  hostnames:
+    includes:
+      - grpc.biliapi.net
+      - app.bilibili.com
+      - api.bilibili.com
+      - api.live.bilibili.com
+      - live.bilibili.com
+      - www.bilibili.com
+      - line3-h5-mobile-api.biligame.com

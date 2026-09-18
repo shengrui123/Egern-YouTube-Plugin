@@ -11,6 +11,7 @@
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
 | 航旅纵横净化 | 清理开屏、推广、榜单及部分会员入口 | [Umetrip.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml) |
+| 哔哩哔哩去广告 | 清理开屏、信息流、动态、评论、搜索与直播间广告 | [Bilibili.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Bilibili.RemoveAds.Egern.yaml) |
 | Spotify 去广告与界面修复 | 去除已知广告请求、恢复列表并提供界面设置 | [Spotify.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Spotify.RemoveAds.Egern.yaml) |
 | 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
@@ -152,6 +153,33 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.
 - 原规则：https://ddgksf2013.top/rewrite/UmetripAds.conf
 - Egern 模组：https://egernapp.com/docs/configuration/modules/
 - Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
+
+## 哔哩哔哩去广告
+
+模组参考可莉发布的 Loon 插件与 kokoryh/Sparkle 当前实现转换。JSON、网页与本地响应逻辑使用 Egern 原生 API；Protobuf 处理脚本增加了 Egern `ctx` 适配与原生 gzip 解压，并移除了源实现中会修改会员或付费播放能力的路由。
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Bilibili.RemoveAds.Egern.yaml
+```
+
+当前处理范围：
+
+- 移除开屏广告、首页及 Story 信息流广告、动态和热门页推广、搜索广告、互动弹幕、置顶评论广告、相关推荐广告与直播间推广。
+- 精简首页顶部与底部导航；不会修改账号真实会员状态。
+- 可在模组设置中调整动态页“最常访问”、评论广告过滤、请求优化、直播活动网页净化与日志等级。
+- 空降助手默认关闭；启用后会访问 `bsbsb.top`，并使用 `kokoryh/chronos` 的第三方跳过数据，可能不准确、失效或产生额外网络请求。
+- 不包含源插件中的大会员状态伪装，也不启用后台播放、投屏、试看提示修改等付费能力相关逻辑。
+- 需要安装并完全信任 Egern 的 MITM CA；建议启用 HTTP/2。尚未进行 Egern / 哔哩哔哩真机验证，请勿与其他处理相同接口的哔哩哔哩模组同时启用。
+
+来源、许可与规范：
+
+- 参考插件：https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
+- Protobuf 原实现：https://github.com/kokoryh/Sparkle（GPL-3.0；详见 `LICENSES/GPL-3.0.txt`）
+- Egern 模组：https://egernapp.com/docs/configuration/modules/
+- Egern 脚本与 API：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
+- Egern URL 重写：https://egernapp.com/docs/configuration/url_rewrites/
 
 ## Spotify 去广告与界面修复
 
