@@ -1,0 +1,83 @@
+name: 中国联通净化
+description: >-
+  屏蔽已知广告请求，精简热搜、首页装饰及我的页面推广。
+  钱包、积分、彩铃默认保留，可在模组设置中单独隐藏。
+author: shengrui123（Egern 适配）；ddgksf2013（接口参考）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: antenna.radiowaves.left.and.right
+
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts
+compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可使用本地目录或 HTTPS 地址。
+
+# default_value 只作为设置页占位提示；配套脚本内另有相同的默认值。
+env_schema:
+  cleanSearch:
+    name: 净化搜索热词
+    default_value: 'true'
+    options: ['true', 'false']
+  cleanHome:
+    name: 净化首页装饰
+    description: 移除首页背景及商城底部标签。
+    default_value: 'true'
+    options: ['true', 'false']
+  cleanBottomConfig:
+    name: 移除商城权益配置（实验）
+    description: 删除下发配置，但 App 可能回退内置导航。
+    default_value: 'true'
+    options: ['true', 'false']
+  blockPromotion:
+    name: 屏蔽营销请求
+    description: 屏蔽智能营销及新人专享接口。
+    default_value: 'true'
+    options: ['true', 'false']
+  cleanFeed:
+    name: 屏蔽首页瀑布流
+    description: 阻止已知瀑布流脚本加载。
+    default_value: 'true'
+    options: ['true', 'false']
+  cleanProfile:
+    name: 净化我的页面推广
+    description: 清空已知横幅及设备图片推广数据。
+    default_value: 'true'
+    options: ['true', 'false']
+  hideWallet:
+    name: 隐藏钱包模块
+    description: 可能同时隐藏钱包相关功能入口。
+    default_value: 'false'
+    options: ['true', 'false']
+  hidePoints:
+    name: 隐藏积分模块
+    description: 可能同时隐藏积分展示及入口。
+    default_value: 'false'
+    options: ['true', 'false']
+  hideRingtone:
+    name: 隐藏彩铃模块
+    default_value: 'false'
+    options: ['true', 'false']
+
+rules:
+  - domain_suffix:
+      match: ad.10010.com
+      policy: REJECT
+
+scriptings:
+  - http_request:
+      name: 中国联通营销请求拦截
+      match: '^https?://(?:m\.client\.10010\.com/(?:mobileserviceimportant/customer/querySmartServicekhd\.htm|clientIndex/api/v1/index/queryIndexExclusiveOffers)(?:\?|$)|img\.client\.10010\.com/homejingxuan12/js/(?:pubuliu|1homeView)[^/?]*(?:\?|$))'
+      script_url: '{{{SCRIPT_BASE}}}/chinaunicom.request.js'
+      body_required: false
+      timeout: 10
+  - http_response:
+      name: 中国联通页面净化
+      match: '^https?://m\.client\.10010\.com/(?:search_service/search/searchScrollWord|clientIndex/homefusion/fuInter|clientMyPage/v\d+/api/(?:newUserInfo|getDeviceInfo|myWallet|myPoints|myColorfulRingtone))(?:\?|$)'
+      script_url: '{{{SCRIPT_BASE}}}/chinaunicom.response.js'
+      body_required: true
+      max_size: 2097152
+      timeout: 10
+
+mitm:
+  hostnames:
+    includes:
+      - m.client.10010.com
+      - img.client.10010.com

@@ -7,6 +7,7 @@
 | 模组 | 功能 | 订阅地址 |
 | --- | --- | --- |
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
+| 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
 | 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
 
@@ -41,6 +42,33 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.C
 - Egern 模组：https://egernapp.com/docs/configuration/modules/
 - Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
 - Egern URL 重写：https://egernapp.com/docs/configuration/url_rewrites/
+
+## 中国联通净化
+
+模组使用 Egern 原生 `env_schema` 提供九个设置开关，并通过两个原生脚本分别处理请求拦截与 JSON 响应净化。未设置开关时，脚本会使用与源插件一致的默认值。
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml
+```
+
+默认效果与限制：
+
+- 拦截 `ad.10010.com` 及其子域名，屏蔽已知营销、新人专享和首页瀑布流请求。
+- 清空搜索热词，移除首页背景、商城及权益底部配置，并净化已知“我的”页面推广。
+- 钱包、积分、彩铃默认保留，可在模组设置中分别隐藏。
+- “我的页面推广”会清空两个目标接口的整个对象型 `data`，可能隐藏同模块的其他信息。
+- 接口来自公开规则及既有抓包说明，并非当前联通 App 的实时抓包；尚未进行 Egern / 中国联通真机验证。
+- 请勿与其他处理相同联通接口的净化模组同时启用。测试时应检查登录、余额查询和充值入口，但不要为验证模组执行实际付款。
+
+来源与规范：
+
+- 源插件：https://raw.githubusercontent.com/shengrui123/Loon-YouTube-Plugin/refs/heads/main/ChinaUnicom.Clean.Loon.plugin
+- 接口参考：https://raw.githubusercontent.com/ddgksf2013/Rewrite/refs/heads/master/AdBlock/ChinaUnicomAds.conf
+- Egern 模组与设置：https://egernapp.com/docs/configuration/modules/
+- Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
+- Egern 规则：https://egernapp.com/docs/configuration/rules/
 
 ## 豆瓣开屏去广告
 
