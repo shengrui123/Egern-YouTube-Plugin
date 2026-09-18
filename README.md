@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
+| 航旅纵横净化 | 清理开屏、推广、榜单及部分会员入口 | [Umetrip.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml) |
 | 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
 
@@ -69,6 +70,33 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUni
 - Egern 模组与设置：https://egernapp.com/docs/configuration/modules/
 - Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
 - Egern 规则：https://egernapp.com/docs/configuration/rules/
+
+## 航旅纵横去广告与净化
+
+模组固定了源插件 2026.09.11.4 的算法快照，并改用 Egern 原生二进制接口：通过 `ctx.response.arrayBuffer()` 读取响应，根据请求头或载荷中的 RPID 选择净化逻辑，最后返回 `Uint8Array`。运行时不会下载或执行 Loon/Quantumult X 脚本。
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml
+```
+
+净化范围与限制：
+
+- 清理已知开屏载荷、首页广告卡片、营销礼包和部分推广入口。
+- 过滤首页瀑布流中的特价机票、酒店、租车、权益及攻略推广。
+- 清理行程横幅、历史行程、航班详情、家人守护及我的页面中的部分会员推广。
+- 按结构过滤动态榜单、我的页面推广入口及底部“经验”导航；这些扩展缺少真实响应样本，不能保证当前版本生效。
+- 仅处理已知 RPID 和结构；未知 RPID、损坏载荷、非 200 响应及未修改内容均原样放行。
+- 隐藏会员推广不会改变服务端权限。请勿与其他处理相同航旅纵横接口的模组同时启用。
+- 尚未进行 Egern / 航旅纵横真机验证；分享抓包样本前应清除 Cookie、Token 和个人行程信息。
+
+来源与规范：
+
+- 源插件：https://raw.githubusercontent.com/shengrui123/Loon-YouTube-Plugin/refs/heads/main/Umetrip.Clean.Loon.plugin
+- 原规则：https://ddgksf2013.top/rewrite/UmetripAds.conf
+- Egern 模组：https://egernapp.com/docs/configuration/modules/
+- Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
 
 ## 豆瓣开屏去广告
 

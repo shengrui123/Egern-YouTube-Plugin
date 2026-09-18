@@ -1,0 +1,33 @@
+name: 航旅纵横去广告与净化
+description: >-
+  清理开屏及已知推广，并过滤榜单、我的页面推广入口和经验底栏。
+  使用配套 Egern 原生脚本处理 Protobuf 二进制响应。
+author: ddgksf2013（原规则及算法）；shengrui123（Egern 适配）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: airplane
+
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts
+compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可使用本地目录或 HTTPS 地址。
+
+scriptings:
+  - http_response:
+      name: 航旅纵横二进制净化
+      match: '^https://(?:sns|appmsg|umehome|opactivity|activity|umerp|umeflightstatus|umestartup)\.umetrip\.com/gateway/api/umetrip/native(?:\?|$)'
+      script_url: '{{{SCRIPT_BASE}}}/umetrip.response.js'
+      body_required: true
+      binary_body: true
+      max_size: 10485760
+      timeout: 10
+
+mitm:
+  hostnames:
+    includes:
+      - sns.umetrip.com
+      - appmsg.umetrip.com
+      - umehome.umetrip.com
+      - opactivity.umetrip.com
+      - activity.umetrip.com
+      - umerp.umetrip.com
+      - umeflightstatus.umetrip.com
+      - umestartup.umetrip.com
