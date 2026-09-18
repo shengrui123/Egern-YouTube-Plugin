@@ -12,6 +12,7 @@
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
 | 航旅纵横净化 | 清理开屏、推广、榜单及部分会员入口 | [Umetrip.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml) |
 | 哔哩哔哩去广告 | 清理开屏、信息流、动态、评论、搜索与直播间广告 | [Bilibili.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Bilibili.RemoveAds.Egern.yaml) |
+| 哔哩哔哩漫画去广告 | 清理开屏、横幅、推荐内容并精简首页及“我的”页面 | [BiliComic.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/BiliComic.RemoveAds.Egern.yaml) |
 | Spotify 去广告与界面修复 | 去除已知广告请求、恢复列表并提供界面设置 | [Spotify.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Spotify.RemoveAds.Egern.yaml) |
 | 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
@@ -180,6 +181,30 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Bilibili
 - Egern 模组：https://egernapp.com/docs/configuration/modules/
 - Egern 脚本与 API：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
 - Egern URL 重写：https://egernapp.com/docs/configuration/url_rewrites/
+
+## 哔哩哔哩漫画去广告
+
+模组参考可莉发布的 Loon 插件转换。广告与推荐接口使用 Egern 原生 Map Local 返回空 JSON，界面净化脚本使用 `export default async function(ctx)` 和 Egern 原生响应对象。
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/BiliComic.RemoveAds.Egern.yaml
+```
+
+当前处理范围：
+
+- 屏蔽活动标签、气泡、通用横幅、搜索横幅、赛季活动、书架与小说推荐、应用初始化广告和开屏素材接口。
+- 移除首页“新人”“新作”“商城”标签。
+- 移除“我的”页面中的“漫画商城”“超漫俱乐部”和“看漫免流量”。
+- 不修改会员、已购漫画、付费章节、漫币、优惠券或订阅状态。
+- 需要安装并完全信任 Egern 的 MITM CA；尚未进行 Egern / 哔哩哔哩漫画真机验证，请勿与其他处理相同接口的模组同时启用。
+
+来源与规范：
+
+- 参考插件：https://kelee.one/Tool/Loon/Lpx/BiliComic_remove_ads.lpx
+- Egern 模组与 Map Local：https://egernapp.com/docs/configuration/modules/ 与 https://egernapp.com/docs/configuration/example/
+- Egern 脚本与 API：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
 
 ## Spotify 去广告与界面修复
 

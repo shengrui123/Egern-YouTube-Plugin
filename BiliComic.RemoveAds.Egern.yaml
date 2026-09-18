@@ -1,0 +1,88 @@
+name: 哔哩哔哩漫画去广告
+description: >-
+  移除开屏广告、悬浮窗、横幅、推荐内容与首页弹窗，精简首页标签、
+  底栏活动入口和“我的”页面。
+author: 可莉🅥（原插件）；shengrui123（Egern 适配）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+open_url: https://apps.apple.com/app/id1426252715
+icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BiliComic.png
+
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts
+compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可使用本地目录或 HTTPS 地址。
+
+# 阻止 HTTP/3 绕过 HTTPS 解密规则。
+rules:
+  - and:
+      match:
+        - domain:
+            match: manga.bilibili.com
+        - protocol:
+            match: quic
+      policy: REJECT
+
+map_locals:
+  - match: '^https://manga\.bilibili\.com/twirp/comic\.v\d+\.Comic/GetActivityTab(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+  - match: '^https://manga\.bilibili\.com/twirp/comic\.v\d+\.Comic/GetBubbles(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+  - match: '^https://manga\.bilibili\.com/twirp/comic\.v\d+\.Comic/GetCommonBanner(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+  - match: '^https://manga\.bilibili\.com/twirp/comic\.v\d+\.Comic/SearchBanner(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+  - match: '^https://manga\.bilibili\.com/twirp/user\.v\d+\.SeasonV\d+/GetSeasonInfo(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+  - match: '^https://manga\.bilibili\.com/twirp/bookshelf\.v\d+\.Bookshelf/ListEmptyRecommend(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+  - match: '^https://manga\.bilibili\.com/twirp/bookshelf\.v\d+\.Bookshelf/NovelRecommend(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+  - match: '^https://manga\.bilibili\.com/twirp/novel\.v\d+\.Novel/MoreRecommend(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+  - match: '^https://manga\.bilibili\.com/twirp/comic\.v\d+\.Comic/AppInit(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+  - match: '^https://manga\.bilibili\.com/twirp/comic\.v\d+\.Comic/ListFlash(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json
+    body: '{}'
+
+scriptings:
+  - http_response:
+      name: 哔哩哔哩漫画界面净化
+      match: '^https://manga\.bilibili\.com/twirp/(?:comic\.v\d+\.Comic/GetClassPageAllTabs|user\.v\d+\.User/UCenterConf)(?:\?.*)?$'
+      script_url: '{{{SCRIPT_BASE}}}/bilicomic.response.js'
+      body_required: true
+      max_size: 2097152
+      timeout: 10
+
+mitm:
+  hostnames:
+    includes:
+      - manga.bilibili.com
