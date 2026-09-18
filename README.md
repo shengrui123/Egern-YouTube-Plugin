@@ -7,6 +7,7 @@
 | 模组 | 功能 | 订阅地址 |
 | --- | --- | --- |
 | 12306 去广告 | 过滤应用内推广及开屏广告字段 | [12306.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/12306.RemoveAds.Egern.yaml) |
+| 支付宝小程序开屏去广告 | 清空小程序广告推荐并拦截广告管理素材 | [Alipay.MiniApp.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Alipay.MiniApp.SplashAds.Egern.yaml) |
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
 | 航旅纵横净化 | 清理开屏、推广、榜单及部分会员入口 | [Umetrip.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml) |
@@ -45,6 +46,31 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/12306.Re
 - Egern 模组：https://egernapp.com/docs/configuration/modules/
 - Egern 消息体重写：https://egernapp.com/docs/configuration/body_rewrites/
 - Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
+
+## 支付宝小程序开屏去广告
+
+这是一个保守范围的 Egern 原生模组：用 Map Local 为阿里妈妈小程序广告推荐接口返回 `{"data":{"result":[]}}`，并用 URL Rewrite 拦截路径中明确标记为 `ad_mgr` 的广告素材。没有拦截整个淘宝、支付宝或支付宝 CDN 域名。
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Alipay.MiniApp.SplashAds.Egern.yaml
+```
+
+使用说明与限制：
+
+- 安装并完全信任 Egern 的 MITM CA 证书，启用模组后彻底退出并重新打开支付宝。
+- 首次验证可打开此前会展示广告的小程序；已经缓存的开屏素材可能需要清理支付宝缓存后才能消失。
+- 模组不拦截支付、登录、收银台、普通小程序包或通用图片资源，降低白屏和核心功能误伤风险。
+- 不同小程序可能使用自有广告接口，因此本模组不能保证覆盖所有第三方小程序广告。
+- 规则来自公开配置而非本机实时抓包，尚未进行 Egern / 支付宝真机验证。若未生效，需要目标小程序名称以及去除身份信息后的请求 URL 继续适配。
+- 请勿与其他大范围支付宝或小程序去广告规则同时启用，以免无法判断白屏或加载失败的来源。
+
+来源与规范：
+
+- 公开规则参考：https://github.com/xingjian2566/Surge/blob/main/AD/Module/Alipay.sgmodule
+- Egern 模组与 Map Local：https://egernapp.com/docs/configuration/modules/ 与 https://egernapp.com/docs/configuration/example/
+- Egern URL 重写：https://egernapp.com/docs/configuration/url_rewrites/
 
 ## 彩云天气净化
 

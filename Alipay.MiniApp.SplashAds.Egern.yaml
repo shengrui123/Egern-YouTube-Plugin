@@ -1,0 +1,26 @@
+name: 支付宝小程序开屏去广告
+description: >-
+  清空支付宝小程序阿里妈妈广告推荐响应，并拦截明确的广告管理素材路径；
+  不处理支付宝支付、登录或普通小程序资源。
+author: xingjian2566（公开规则参考）；shengrui123（Egern 适配）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: apps.iphone
+
+# 广告推荐接口需要返回预期 JSON 结构，直接拒绝可能导致小程序白屏或重试。
+map_locals:
+  - match: '^https://acs4miniapp-inner\.m\.taobao\.com/gw/mtop\.alimama\.abyss\.unionpage\.get(?:[/?].*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json; charset=utf-8
+    body: '{"data":{"result":[]}}'
+
+url_rewrites:
+  # 仅匹配路径中明确标记为 ad_mgr 的广告素材，不扩大到通用 CDN 资源。
+  - match: '^https?://mdn\.alipayobjects\.com/ad_mgr/afts/file/.*$'
+    location: http://reject-dict/
+
+mitm:
+  hostnames:
+    includes:
+      - acs4miniapp-inner.m.taobao.com
+      - mdn.alipayobjects.com
