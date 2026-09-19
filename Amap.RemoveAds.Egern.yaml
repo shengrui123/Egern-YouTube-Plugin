@@ -88,11 +88,6 @@ map_locals:
     status_code: 200
     headers: {Content-Type: application/json}
     body: '{}'
-  # 首页浮窗、运营位和营销商品卡片。
-  - match: '^https://m5\.amap\.com/ws/shield/frogserver/aocs/updatable/1\?'
-    status_code: 200
-    headers: {Content-Type: application/json}
-    body: '{}'
   - match: '^https://m5\.amap\.com/ws/(?:mapapi/hint_text/offline_data|message/notice/list|shield/search/new_hotword)(?:\?.*)?$'
     status_code: 200
     headers: {Content-Type: application/json}
