@@ -1,0 +1,16 @@
+# Apple Intelligence / Siri / Private Cloud Compute
+# Egern 原生规则集，由主配置的 rule_set 指定策略。
+# 核心主机来源：Apple「Use Apple products on enterprise networks」。
+# gspe1-ssl.ls.apple.com 与 apple-relay.mask.apple-dns.net 为社区实测兼容项。
+
+domain_set:
+  - guzzoni.apple.com
+  - apple-relay.cloudflare.com
+  - apple-relay.fastly-edge.com
+  - cp4.cloudflare.com
+  - apple-relay.apple.com
+  - gspe1-ssl.ls.apple.com
+  - apple-relay.mask.apple-dns.net
+
+domain_suffix_set:
+  - smoot.apple.com

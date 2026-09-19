@@ -1,0 +1,67 @@
+name: Apple Intelligence 分流
+description: >-
+  将 Apple Intelligence、Private Cloud Compute、Siri 与系统搜索的核心请求
+  分流到指定策略，并排除 HTTPS 解密。
+author: shengrui123
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+manual: https://github.com/shengrui123/Egern-YouTube-Plugin#apple-intelligence-分流
+icon: apple.intelligence
+
+# POLICY 必须是主配置中已存在的节点或策略组名。
+# 中国大陆用户通常应选择 Apple Intelligence 已支持地区的节点。
+compat_arguments:
+  POLICY: PROXY
+compat_arguments_desc: >-
+  POLICY 为分流策略名，默认 PROXY；如主配置中没有该策略组，
+  请在模组设置中改成实际的策略组或节点名。
+
+rules:
+  # Apple 官方：Siri 与听写。
+  - domain:
+      match: guzzoni.apple.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Siri
+  # Apple 官方：Siri、Spotlight、查询、Safari、新闻、信息与音乐搜索。
+  - domain_suffix:
+      match: smoot.apple.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Search
+  # Apple 官方：Private Cloud Compute 与 Apple Intelligence Extensions。
+  - domain:
+      match: apple-relay.cloudflare.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - PCC Cloudflare
+  - domain:
+      match: apple-relay.fastly-edge.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - PCC Fastly
+  - domain:
+      match: cp4.cloudflare.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - PCC Cloudflare CP4
+  - domain:
+      match: apple-relay.apple.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Extensions
+  # 社区实测兼容项：地区可用性检查与新版 Apple Relay DNS 名称。
+  - domain:
+      match: gspe1-ssl.ls.apple.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Eligibility
+  - domain:
+      match: apple-relay.mask.apple-dns.net
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Relay DNS
+
+# Apple 明确要求不得对这些连接执行 HTTPS/SSL 检查。
+mitm:
+  hostnames:
+    excludes:
+      - guzzoni.apple.com
+      - '*.smoot.apple.com'
+      - apple-relay.cloudflare.com
+      - apple-relay.fastly-edge.com
+      - cp4.cloudflare.com
+      - apple-relay.apple.com
+      - gspe1-ssl.ls.apple.com
+      - apple-relay.mask.apple-dns.net

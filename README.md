@@ -17,12 +17,54 @@
 | Spotify 去广告与界面修复 | 去除已知广告请求、恢复列表并提供界面设置 | [Spotify.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Spotify.RemoveAds.Egern.yaml) |
 | 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
+| Apple Intelligence 分流 | Apple Intelligence、PCC、Siri 与系统搜索分流，同时排除 HTTPS 解密 | [AppleIntelligence.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/AppleIntelligence.Egern.yaml) |
 
 ## 安装
 
 1. 在 Egern 的「工具 → 模组」中添加上表对应的 YAML 原始文件 URL。
 2. 安装并完全信任 Egern 的 MITM CA 证书。
 3. 启用模组后重新打开相应 App。
+
+## Apple Intelligence 分流
+
+这套配置提供两种用法：
+
+- `AppleIntelligence.Egern.yaml` 是可直接导入的 Egern 模组，自带路由规则和 MITM 排除列表。
+- `AppleIntelligence.RuleSet.Egern.yaml` 是纯 Egern 原生规则集，适合在主配置中用 `rule_set` 引用。
+
+模组直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/AppleIntelligence.Egern.yaml
+```
+
+模组默认将命中流量交给名为 `PROXY` 的策略组。导入后打开模组设置，把 `POLICY` 改为你配置中真实存在的美国或其他 Apple Intelligence 可用地区策略组。节点需支持 UDP，否则 Private Cloud Compute 可能回落 TCP 或连接失败。
+
+在主配置中引用纯规则集的示例：
+
+```yaml
+rules:
+  - rule_set:
+      match: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/AppleIntelligence.RuleSet.Egern.yaml
+      policy: PROXY
+      update_interval: 86400
+```
+
+覆盖范围：
+
+- Apple 官方列出的 Siri/听写、`smoot` 系统搜索、Private Cloud Compute 的 Cloudflare/Fastly 入口，以及 Apple Intelligence Extensions 中继。
+- 额外收录社区实测常用的 `gspe1-ssl.ls.apple.com` 地区可用性检查和 `apple-relay.mask.apple-dns.net` 新版中继名称。
+- 不使用 `DOMAIN-KEYWORD,siri`、整个 `ls.apple.com`、整个 `icloud.com` 或整个 `apple-dns.net` 等过宽规则，避免将定位、iCloud 与其他 Apple 服务一并代理。
+- 不包含通用系统更新/CDN 域名；Apple Intelligence 本地模型的下载属于 Apple 通用资产分发，把大体积资产强制走境外节点并不会带来解锁效果。
+- Apple 官方明确要求不得对这些服务执行 HTTPS/SSL 内容检查；模组已将相关主机放入 MITM 排除列表。如只用纯规则集，请在现有 MITM 配置中手动排除它们。
+- 分流规则只决定网络出口，不能绕过机型、系统版本、Apple 账号、设备地区、语言或 Apple 服务端的资格限制。
+
+来源与规范：
+
+- Apple 企业网络主机清单：https://support.apple.com/en-us/101555
+- 社区兼容项参考：https://ruleset.skk.moe/List/non_ip/apple_intelligence.conf 与 https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/apple-intelligence.list
+- Egern 模组：https://egernapp.com/docs/configuration/modules/
+- Egern 规则与规则集：https://egernapp.com/docs/configuration/rules/
 
 ## 12306 去广告
 
