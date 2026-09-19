@@ -189,7 +189,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
       delete obj.data[i];
     }
   }
-} else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
+} else if (url.includes("/shield/dsp/profile/index/nodefaasv3") || url.includes("/faas/amap-navigation/usr-profile-fc/homeV2")) {
   // 我的页面
   if (obj?.data) {
     if (obj?.data?.tipData) {
@@ -204,6 +204,40 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     }
     if (obj?.data?.cardList?.length > 0) {
       obj.data.cardList = obj.data.cardList.filter((i) => i?.dataKey === "MyOrderCard");
+    }
+
+    // 新版 homeV2 将首页浮窗、任务卡和运营卡片拆到多个字段。
+    // 保留账户、订单、收藏、设置等基础数据。
+    const removeKeys = new Set([
+      "popup", "popups", "floatLayer", "floatingLayer", "floatingWindow",
+      "operation", "operationLayer", "operationCard", "operationList",
+      "banner", "bannerList", "banners", "marketing", "marketingCard",
+      "activity", "activityCard", "activityList", "recommend", "recommendList",
+      "task", "taskCard", "taskList", "mission", "missionCard", "missionList",
+      "ad", "ads", "advertisement", "advertisements", "promotion", "promotions",
+      "redPacket", "coupon", "gift", "memberBenefit", "growthTask"
+    ]);
+    const scrubProfile = (value) => {
+      if (!value || typeof value !== "object") return;
+      if (Array.isArray(value)) {
+        for (const item of value) scrubProfile(item);
+        return;
+      }
+      for (const key of Object.keys(value)) {
+        if (removeKeys.has(key)) delete value[key];
+        else scrubProfile(value[key]);
+      }
+    };
+    scrubProfile(obj.data);
+
+    // 新版运营卡片通常以数组返回，只保留订单、个人资料、设置和登录卡。
+    for (const key of ["cards", "cardList", "moduleList", "contentList", "sections"]) {
+      if (Array.isArray(obj.data[key])) {
+        obj.data[key] = obj.data[key].filter((i) => {
+          const k = String(i?.dataKey ?? i?.key ?? i?.type ?? "").toLowerCase();
+          return k.includes("order") || k.includes("profile") || k.includes("setting") || k.includes("login");
+        });
+      }
     }
   }
 } else if (url.includes("/shield/frogserver/aocs/updatable/")) {

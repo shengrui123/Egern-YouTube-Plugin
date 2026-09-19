@@ -84,7 +84,7 @@ map_locals:
     status_code: 200
     headers: {Content-Type: application/json}
     body: '{}'
-  - match: '^https://m5\.amap\.com/ws/faas/amap-navigation/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc/homeV2)(?:\?.*)?$'
+  - match: '^https://m5\.amap\.com/ws/faas/amap-navigation/(?:main-page-assets|main-page-location|ridewalk-end-fc)(?:\?.*)?$'
     status_code: 200
     headers: {Content-Type: application/json}
     body: '{}'
@@ -140,7 +140,7 @@ header_rewrites:
 scriptings:
   - http_response:
       name: 高德地图广告与界面净化
-      match: '^https://(?:m5\.amap\.com/ws/(?:aos/perception/publicTravel/beforeNavi|bus/plan/integrate|c3frontend/(?:af-(?:hotel|launch)/page/main|af-nearby/nearby)|perception/drive/(?:routeInfo|routePlan)|shield/(?:search_bff/hotword|search_poi/(?:mps|search/sp|sug|tips_operation_location)|frogserver/aocs/updatable/[^?]+|dsp/profile/index/nodefaasv3|search/nearbyrec_smart)|faas/amap-navigation/(?:card-service-plan-home|main-page)|valueadded/alimama/splash_screen)|m5-zb\.amap\.com/ws/(?:boss/(?:car/order/content_info|order_web/friendly_information)|promotion-web/resource(?:/home)?)|(?:info|m5)\.amap\.com/ws/shield/search/(?:common/coupon/info|poi/detail))(?:\?.*)?$'
+      match: '^https://(?:m5\.amap\.com/ws/(?:aos/perception/publicTravel/beforeNavi|bus/plan/integrate|c3frontend/(?:af-(?:hotel|launch)/page/main|af-nearby/nearby)|perception/drive/(?:routeInfo|routePlan)|shield/(?:search_bff/hotword|search_poi/(?:mps|search/sp|sug|tips_operation_location)|frogserver/aocs/updatable/[^?]+|dsp/profile/index/nodefaasv3|search/nearbyrec_smart)|faas/amap-navigation/(?:card-service-plan-home|main-page|usr-profile-fc/homeV2)|valueadded/alimama/splash_screen)|m5-zb\.amap\.com/ws/(?:boss/(?:car/order/content_info|order_web/friendly_information)|promotion-web/resource(?:/home)?)|(?:info|m5)\.amap\.com/ws/shield/search/(?:common/coupon/info|poi/detail))(?:\?.*)?$'
       script_url: '{{{SCRIPT_BASE}}}/amap.response.js'
       body_required: true
       max_size: 10485760
