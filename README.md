@@ -38,7 +38,9 @@
 https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/AppleIntelligence.Egern.yaml
 ```
 
-模组默认将命中流量交给名为 `PROXY` 的策略组。导入后打开模组设置，把 `POLICY` 改为你配置中真实存在的美国或其他 Apple Intelligence 可用地区策略组。节点需支持 UDP，否则 Private Cloud Compute 可能回落 TCP 或连接失败。
+模组默认将命中流量交给名为 `PROXY` 的策略组。导入后打开模组设置，把 `POLICY` 改为你配置中真实存在的美国或其他 Apple Intelligence 可用地区策略组。策略名必须完全一致；不存在的 `PROXY` 会直接导致连接失败。
+
+模组会仅拒绝 Apple Intelligence 建链域名上的 QUIC，让 Private Cloud Compute 自动回落到 TCP 443，以兼容不支持 UDP 转发的节点。该规则不会全局禁用 QUIC。
 
 在主配置中引用纯规则集的示例：
 
@@ -53,8 +55,8 @@ rules:
 覆盖范围：
 
 - Apple 官方列出的 Siri/听写、`smoot` 系统搜索、Private Cloud Compute 的 Cloudflare/Fastly 入口，以及 Apple Intelligence Extensions 中继。
-- 额外收录社区实测常用的 `gspe1-ssl.ls.apple.com` 地区可用性检查和 `apple-relay.mask.apple-dns.net` 新版中继名称。
-- 不使用 `DOMAIN-KEYWORD,siri`、整个 `ls.apple.com`、整个 `icloud.com` 或整个 `apple-dns.net` 等过宽规则，避免将定位、iCloud 与其他 Apple 服务一并代理。
+- 额外收录社区实测常用的 `gspe1-ssl.ls.apple.com` 地区可用性检查，以及 Akamai Relay、Mask、iCloud Gateway 和它们当前的 Apple DNS CNAME 建链主机。
+- 不使用 `DOMAIN-KEYWORD,siri`、整个 `ls.apple.com`、整个 `icloud.com` 或整个 `apple-dns.net` 等过宽规则；只精确收录建链需要的 iCloud/Apple DNS 主机，避免将其他 Apple 服务一并代理。
 - 不包含通用系统更新/CDN 域名；Apple Intelligence 本地模型的下载属于 Apple 通用资产分发，把大体积资产强制走境外节点并不会带来解锁效果。
 - Apple 官方明确要求不得对这些服务执行 HTTPS/SSL 内容检查；模组已将相关主机放入 MITM 排除列表。如只用纯规则集，请在现有 MITM 配置中手动排除它们。
 - 分流规则只决定网络出口，不能绕过机型、系统版本、Apple 账号、设备地区、语言或 Apple 服务端的资格限制。

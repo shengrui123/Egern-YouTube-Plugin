@@ -16,6 +16,16 @@ compat_arguments_desc: >-
   请在模组设置中改成实际的策略组或节点名。
 
 rules:
+  # 仅拒绝 Apple Intelligence 建链域名的 QUIC，促使系统回落 TCP 443。
+  # 这可避免 TCP-only 节点将 PCC/MASQUE 请求直接报为网络错误。
+  - and:
+      match:
+        - domain_regex:
+            match: '^(?:apple-relay\.(?:apple\.com|cloudflare\.com|fastly-edge\.com|akamaized\.net|mask\.apple-dns\.net)|cp4\.cloudflare\.com|mask(?:-api|-h2)?\.icloud\.com|gateway\.icloud\.com|(?:mask|mask-api\.fe2|gateway\.fe2)\.apple-dns\.net)$'
+        - protocol:
+            match: quic
+      policy: REJECT
+      name: Apple Intelligence - QUIC TCP Fallback
   # Apple 官方：Siri 与听写。
   - domain:
       match: guzzoni.apple.com
@@ -52,6 +62,39 @@ rules:
       match: apple-relay.mask.apple-dns.net
       policy: "{{{POLICY}}}"
       name: Apple Intelligence - Relay DNS
+  # PCC/Extensions 建链可使用的其他 Relay、Mask 与 iCloud 网关。
+  - domain:
+      match: apple-relay.akamaized.net
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Relay Akamai
+  - domain:
+      match: mask-api.icloud.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Mask API
+  - domain:
+      match: mask-h2.icloud.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Mask HTTP2
+  - domain:
+      match: mask.icloud.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Mask QUIC
+  - domain:
+      match: gateway.icloud.com
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - iCloud Gateway
+  - domain:
+      match: mask.apple-dns.net
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Mask DNS
+  - domain:
+      match: mask-api.fe2.apple-dns.net
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Mask API DNS
+  - domain:
+      match: gateway.fe2.apple-dns.net
+      policy: "{{{POLICY}}}"
+      name: Apple Intelligence - Gateway DNS
 
 # Apple 明确要求不得对这些连接执行 HTTPS/SSL 检查。
 mitm:
@@ -65,3 +108,11 @@ mitm:
       - apple-relay.apple.com
       - gspe1-ssl.ls.apple.com
       - apple-relay.mask.apple-dns.net
+      - apple-relay.akamaized.net
+      - mask-api.icloud.com
+      - mask-h2.icloud.com
+      - mask.icloud.com
+      - gateway.icloud.com
+      - mask.apple-dns.net
+      - mask-api.fe2.apple-dns.net
+      - gateway.fe2.apple-dns.net

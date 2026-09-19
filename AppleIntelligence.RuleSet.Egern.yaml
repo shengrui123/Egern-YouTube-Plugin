@@ -11,6 +11,14 @@ domain_set:
   - apple-relay.apple.com
   - gspe1-ssl.ls.apple.com
   - apple-relay.mask.apple-dns.net
+  - apple-relay.akamaized.net
+  - mask-api.icloud.com
+  - mask-h2.icloud.com
+  - mask.icloud.com
+  - gateway.icloud.com
+  - mask.apple-dns.net
+  - mask-api.fe2.apple-dns.net
+  - gateway.fe2.apple-dns.net
 
 domain_suffix_set:
   - smoot.apple.com
