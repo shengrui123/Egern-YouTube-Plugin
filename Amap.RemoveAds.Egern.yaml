@@ -1,5 +1,5 @@
 name: 高德地图去广告
-description: 过滤高德地图开屏广告、搜索与路线推广、导航结束页内容、打车页营销，关闭底部 AI 对话与打车入口的远程配置，并精简首页及“我的”页面。
+description: 过滤高德地图开屏广告、首页浮窗、搜索与路线推广、导航结束页内容、打车页营销，拦截明确的统计追踪请求，关闭底部 AI 对话与打车入口的远程配置，并精简首页及“我的”页面。
 author: RuCu6、kelv1n1n（原脚本）；shengrui123（Egern 适配）
 homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
 open_url: https://apps.apple.com/app/id461703208
@@ -25,6 +25,23 @@ rules:
       policy: REJECT
   - domain_suffix:
       match: v.smtcdns.com
+      policy: REJECT
+  # 明确用于日志/统计/诊断的域名；不封锁 m5.amap.com，避免影响地图定位和导航。
+  - domain:
+      match: log.amap.com
+      policy: REJECT
+  - domain:
+      match: stats.amap.com
+      policy: REJECT
+  - domain:
+      match: analytics.amap.com
+      policy: REJECT
+  - domain:
+      match: adashx.amap.com
+      policy: REJECT
+  # m5 上明确的遥测路径，不匹配定位、搜索、路线和地图核心路径。
+  - url_regex:
+      match: '^https://m5\.amap\.com/(?:ws/)?(?:log|logs|monitor|metrics|analytics|track|trace)/'
       policy: REJECT
   # 防止 HTTP/3 绕过 HTTPS 解密规则。
   - and:
@@ -71,6 +88,11 @@ map_locals:
     status_code: 200
     headers: {Content-Type: application/json}
     body: '{}'
+  # 首页浮窗、运营位和营销商品卡片。
+  - match: '^https://m5\.amap\.com/ws/shield/frogserver/aocs/updatable/1\?'
+    status_code: 200
+    headers: {Content-Type: application/json}
+    body: '{}'
   - match: '^https://m5\.amap\.com/ws/(?:mapapi/hint_text/offline_data|message/notice/list|shield/search/new_hotword)(?:\?.*)?$'
     status_code: 200
     headers: {Content-Type: application/json}
@@ -99,6 +121,21 @@ map_locals:
     status_code: 200
     headers: {Content-Type: application/json}
     body: '{}'
+
+header_rewrites:
+  # 仅删除统计域名上的常见设备标识请求头，不触碰地图服务请求。
+  - delete:
+      match: '^https://(?:log|stats|analytics|adashx)\.amap\.com/'
+      name: X-Device-ID
+      type: request
+  - delete:
+      match: '^https://(?:log|stats|analytics|adashx)\.amap\.com/'
+      name: X-IMEI
+      type: request
+  - delete:
+      match: '^https://(?:log|stats|analytics|adashx)\.amap\.com/'
+      name: X-IDFA
+      type: request
 
 scriptings:
   - http_response:
