@@ -215,7 +215,11 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
       "activity", "activityCard", "activityList", "recommend", "recommendList",
       "task", "taskCard", "taskList", "mission", "missionCard", "missionList",
       "ad", "ads", "advertisement", "advertisements", "promotion", "promotions",
-      "redPacket", "coupon", "gift", "memberBenefit", "growthTask"
+      "redPacket", "coupon", "gift", "memberBenefit", "growthTask",
+      "popupInfo", "activityPopup", "guidePopup", "dialog", "modal",
+      "medal", "medals", "medalTask", "badge", "badges", "badgeTask",
+      "achievement", "achievements", "ridingTask", "riderTask", "newcomerTask",
+      "ridingGrowth", "growthReward", "reward", "rewards", "benefit", "benefits"
     ]);
     const scrubProfile = (value) => {
       if (!value || typeof value !== "object") return;
