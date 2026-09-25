@@ -16,6 +16,7 @@
 | 哔哩哔哩漫画去广告 | 清理开屏、横幅、推荐内容并精简首页及“我的”页面 | [BiliComic.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/BiliComic.RemoveAds.Egern.yaml) |
 | Spotify 去广告与界面修复 | 去除已知广告请求、恢复列表并提供界面设置 | [Spotify.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Spotify.RemoveAds.Egern.yaml) |
 | 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
+| 红果短剧去广告 | 拦截开屏及应用内已知广告请求与素材 | [Hongguo.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Hongguo.RemoveAds.Egern.yaml) |
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
 | Apple Intelligence 分流 | Apple Intelligence、PCC、Siri 与系统搜索分流，同时排除 HTTPS 解密 | [AppleIntelligence.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/AppleIntelligence.Egern.yaml) |
 
@@ -24,6 +25,20 @@
 1. 在 Egern 的「工具 → 模组」中添加上表对应的 YAML 原始文件 URL。
 2. 安装并完全信任 Egern 的 MITM CA 证书。
 3. 启用模组后重新打开相应 App。
+
+## 红果短剧去广告
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Hongguo.RemoveAds.Egern.yaml
+```
+
+模组使用 Egern 原生域名规则拒绝穿山甲广告服务，并对 `pangolin-sdk-toutiao.com`、`pstatp.com`、`snssdk.com` 和 `byteimg.com` 上明确的广告路径执行 URL Rewrite 拒绝。范围包括开屏和应用内广告请求、广告包及图片素材；不修改会员、金币、解锁或奖励状态。共享域名的普通视频与图片路径不在匹配范围内。
+
+使用前请安装并信任 Egern 的 MITM CA 证书，启用 HTTPS 解密，然后重启红果短剧。MITM 列表包含共享的字节域名；若客户端启用了证书固定、使用 QUIC 或变更接口，相关 URL 规则可能不生效。当前仅按公开规则转换并验证语法及匹配范围，尚无红果 iOS 真机抓包与实际开屏、播放测试；无法保证覆盖全部广告，尤其是缓存、内嵌或服务端插入的广告。
+
+规则参考：[HongGuo-Surge-Native.sgmodule](https://github.com/doovvip/sublink-worker2/blob/main/surge-modules/HongGuo-Surge-Native.sgmodule)；Egern 规范：[Modules](https://egernapp.com/docs/configuration/modules/)、[Rules](https://egernapp.com/docs/configuration/rules/)、[URL Rewriting](https://egernapp.com/docs/configuration/url_rewrites/)。
 
 ## Apple Intelligence 分流
 

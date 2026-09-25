@@ -1,0 +1,56 @@
+name: 红果短剧去广告
+description: 拦截已知穿山甲广告请求、开屏素材与应用内广告资源；保留短剧播放、登录和奖励接口。
+author: shengrui123（Egern 适配）；doovvip（规则参考）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: play.rectangle.on.rectangle.fill
+
+# 广告专用域名可在 TLS 解密前直接拒绝，避免影响共享的内容域名。
+rules:
+  - domain:
+      match: p6-ad-sign.byteimg.com
+      policy: REJECT
+  - domain:
+      match: p9-ad-sign.byteimg.com
+      policy: REJECT
+  - domain:
+      match: api-access.pangolin-sdk-toutiao.com
+      policy: REJECT
+  - domain:
+      match: api-access.pangolin-sdk-toutiao-b.com
+      policy: REJECT
+  - domain:
+      match: api-access.pangolin-sdk-toutiao1.com
+      policy: REJECT
+  - domain:
+      match: log-api.pangolin-sdk-toutiao.com
+      policy: REJECT
+  - domain:
+      match: log-api.pangolin-sdk-toutiao-b.com
+      policy: REJECT
+  - domain_suffix:
+      match: pglstatp-toutiao.com
+      policy: REJECT
+
+# 共享域名只匹配广告路径，不拒绝整站，以免影响视频和图片加载。
+url_rewrites:
+  - match: '^https?://[^/]+\.pangolin-sdk-toutiao\.com/api/ad/union/sdk/(?:get_ads|stats|settings)(?:[/?].*)?$'
+    location: http://reject/
+  - match: '^https?://[^/]+\.(?:pglstatp-toutiao|pstatp)\.com/(?:obj|img)/(?:ad-app-package|ad)(?:[/?].*)?$'
+    location: http://reject/
+  - match: '^https?://[^/]+\.(?:pglstatp-toutiao|pstatp)\.com/obj/ad-pattern/renderer(?:[/?].*)?$'
+    location: http://reject/
+  - match: '^https?://[^/]+\.pstatp\.com/obj/mosaic-legacy/[^?]*\?(?:[^#]*&)?from=ad(?:&|$)'
+    location: http://reject/
+  - match: '^https?://[^/]+\.snssdk\.com/api/ad(?:[/?].*)?$'
+    location: http://reject/
+  - match: '^https?://[^/]+\.byteimg\.com/(?:ad-app-package|web\.business\.image)(?:[/?].*)?$'
+    location: http://reject/
+
+mitm:
+  hostnames:
+    includes:
+      - '*.pangolin-sdk-toutiao.com'
+      - '*.pglstatp-toutiao.com'
+      - '*.pstatp.com'
+      - '*.snssdk.com'
+      - '*.byteimg.com'
