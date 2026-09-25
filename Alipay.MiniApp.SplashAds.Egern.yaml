@@ -1,8 +1,8 @@
 name: 支付宝小程序开屏去广告
 description: >-
-  清空支付宝小程序阿里妈妈广告推荐响应，并拦截明确的广告管理素材路径；
-  不处理支付宝支付、登录或普通小程序资源。
-author: xingjian2566（公开规则参考）；shengrui123（Egern 适配）
+  清空支付宝小程序阿里妈妈广告推荐及哈啰小程序 adx 广告接口响应，
+  并拦截明确的广告管理素材路径；不处理支付宝支付、登录或普通小程序资源。
+author: xingjian2566、是豆豆呀（公开规则参考）；shengrui123（Egern 适配）
 homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
 icon: apps.iphone
 
@@ -14,6 +14,13 @@ map_locals:
       Content-Type: application/json; charset=utf-8
     body: '{"data":{"result":[]}}'
 
+  # 哈啰小程序首页弹窗广告接口；公开规则来自微信小程序，支付宝扫码场景需实测。
+  - match: '^https://api\.hellobike\.com/api\?adx(?:[=&].*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json; charset=utf-8
+    body: '{}'
+
 url_rewrites:
   # 仅匹配路径中明确标记为 ad_mgr 的广告素材，不扩大到通用 CDN 资源。
   - match: '^https?://mdn\.alipayobjects\.com/ad_mgr/afts/file/.*$'
@@ -23,4 +30,5 @@ mitm:
   hostnames:
     includes:
       - acs4miniapp-inner.m.taobao.com
+      - api.hellobike.com
       - mdn.alipayobjects.com
