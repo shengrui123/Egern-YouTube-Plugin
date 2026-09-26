@@ -14,6 +14,7 @@
 | 支付宝小程序开屏去广告 | 清空小程序广告推荐并拦截广告管理素材 | [Alipay.MiniApp.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Alipay.MiniApp.SplashAds.Egern.yaml) |
 | 淘宝闪购开屏去广告 | 拦截已知竖屏开屏图片素材 | [Taobao.Flash.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Taobao.Flash.SplashAds.Egern.yaml) |
 | 高德地图去广告 | 清理开屏、搜索、路线、导航及打车页推广 | [Amap.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Amap.RemoveAds.Egern.yaml) |
+| 米家开屏去广告 | 清空 `openingBanner` 开屏推荐响应 | [MiHome.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/MiHome.SplashAds.Egern.yaml) |
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
 | 航旅纵横净化 | 清理开屏、推广、榜单及部分会员入口 | [Umetrip.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml) |
@@ -30,6 +31,18 @@
 1. 在 Egern 的「工具 → 模组」中添加上表对应的 YAML 原始文件 URL。
 2. 安装并完全信任 Egern 的 MITM CA 证书。
 3. 启用模组后重新打开相应 App。
+
+## 米家开屏去广告
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/MiHome.SplashAds.Egern.yaml
+```
+
+安装并信任 Egern 的 MITM CA 证书，启用模组后彻底退出并重新打开米家。模组只对 `home.mi.com` 的 `recommendation/openingBanner` 请求返回 HTTP 200 和空 JSON，不拦截整个域名，也不处理首页横幅、设备、账号和自动化接口。
+
+规则依据公开维护的[米家重写项](https://github.com/blackmatrix7/ios_rule_script/blob/master/rewrite/Loon/Advertising/Advertising.plugin)及[另一份米家规则](https://github.com/lcmigg/Surge/blob/master/Qx_url)，语法参考 [Egern 配置示例](https://egernapp.com/docs/configuration/example/)与[模组文档](https://egernapp.com/docs/configuration/modules/)。已验证 YAML 解析和匹配范围；尚未在当前米家 iOS 版本上抓包或真机确认。如开屏广告仍出现，可根据 Egern 抓包记录核对实际请求 URL；已有缓存也可能继续显示旧素材。
 
 ## 淘宝闪购开屏去广告
 

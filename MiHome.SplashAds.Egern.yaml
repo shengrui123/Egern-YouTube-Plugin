@@ -1,0 +1,18 @@
+name: 米家开屏去广告
+description: 将米家 openingBanner 开屏推荐接口返回为空 JSON，不修改设备控制和其他推荐接口。
+author: shengrui123（Egern 适配；公开规则参考 blackmatrix7、lcmigg）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MiHome.png
+
+# 仅处理米家开屏广告配置，保留首页 banner、我的页、设备和账号请求。
+map_locals:
+  - match: '^https://home\.mi\.com/cgi-op/api/v[0-9]+/recommendation/openingBanner/?(?:\?.*)?$'
+    status_code: 200
+    headers:
+      Content-Type: application/json; charset=utf-8
+    body: '{}'
+
+mitm:
+  hostnames:
+    includes:
+      - home.mi.com
