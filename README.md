@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | 12306 去广告 | 过滤应用内推广及开屏广告字段 | [12306.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/12306.RemoveAds.Egern.yaml) |
 | 支付宝小程序开屏去广告 | 清空小程序广告推荐并拦截广告管理素材 | [Alipay.MiniApp.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Alipay.MiniApp.SplashAds.Egern.yaml) |
+| 淘宝闪购开屏去广告 | 拦截已知竖屏开屏图片素材 | [Taobao.Flash.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Taobao.Flash.SplashAds.Egern.yaml) |
 | 高德地图去广告 | 清理开屏、搜索、路线、导航及打车页推广 | [Amap.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Amap.RemoveAds.Egern.yaml) |
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
@@ -25,6 +26,20 @@
 1. 在 Egern 的「工具 → 模组」中添加上表对应的 YAML 原始文件 URL。
 2. 安装并完全信任 Egern 的 MITM CA 证书。
 3. 启用模组后重新打开相应 App。
+
+## 淘宝闪购开屏去广告
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Taobao.Flash.SplashAds.Egern.yaml
+```
+
+模组将公开规则中典型竖屏尺寸的开屏图片请求返回为 1×1 透明图片，只配置 `fuss10.elemecdn.com`、`cube.elemecdn.com` 和 `nr-op.elemecdn.com` 的 HTTPS 解密。启用前需安装并信任 Egern 的 CA 证书；启用后彻底退出淘宝闪购并重新打开。若此前广告素材已缓存，可先在 App 中清理缓存再试。
+
+这些 CDN 也承载普通图片，尺寸相同的商品或店铺图片存在误拦截可能。此模组没有拦截整站、首页配置、下单、登录或支付接口。规则依据公开配置转换并通过本地语法及 URL 匹配检查，尚无当前淘宝闪购 iOS 版本的真机抓包验证，不能保证覆盖所有开屏广告。若仍显示广告，需要去除身份信息后的实际广告请求 URL 才能进一步适配。
+
+规则参考：[fmz200 饿了么模块](https://github.com/fmz200/wool_scripts/blob/main/Surge/module/split/partE/Eleme.sgmodule)、[letswish 聚合模块](https://github.com/letswish/Shadowrocket-Module/blob/main/All-in-One-AdBlock.sgmodule)。Egern 语法：[Modules](https://egernapp.com/docs/configuration/modules/)、[URL Rewriting](https://egernapp.com/docs/configuration/url_rewrites/)。
 
 ## 红果短剧去广告
 

@@ -1,0 +1,22 @@
+name: 淘宝闪购开屏去广告
+description: 拦截原饿了么客户端已知的竖屏开屏图片素材请求。
+author: shengrui123（Egern 适配）；fmz200、letswish（公开规则参考）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: rectangle.portrait.slash
+
+# 只匹配公开规则中带有典型竖屏尺寸的图片 URL。
+# CDN 同时承载商品和店铺图片，因此不拒绝整个域名。
+url_rewrites:
+  - match: '^https://fuss10\.elemecdn\.com/.+/w/(?:640/h/(?:[7-9]\d{2}|[1-9]\d{3})|750/h/(?:[8-9]\d{2}|[1-9]\d{3}))(?:/|\?|$)'
+    location: http://reject-img/
+  - match: '^https://cube\.elemecdn\.com/[\w/]+\.jpeg\?x-oss-process=image/resize,m_fill,w_(?:1\d{3},h_2\d{3}|6\d{2},h_8\d{2}|\d{3},h_\d{4})/format,webp/'
+    location: http://reject-img/
+  - match: '^https://(?:nr-op|cube)\.elemecdn\.com/.+\.jpeg\?x-oss-process=image/resize,m_fill,w_\d{4,},h_\d{4,}/(?:$|format,webp/(?:$|\?))'
+    location: http://reject-img/
+
+mitm:
+  hostnames:
+    includes:
+      - fuss10.elemecdn.com
+      - cube.elemecdn.com
+      - nr-op.elemecdn.com
