@@ -1,0 +1,461 @@
+{
+  "name": "常用海外 App 与网站",
+  "icons": [
+    {
+      "name": "Cloudflare 1.1.1.1",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/1.1.1.1.png"
+    },
+    {
+      "name": "Adobe Creative Cloud",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Adobe_Creative_Cloud.png"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Agenda.png"
+    },
+    {
+      "name": "Audiomack",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Audiomack.png"
+    },
+    {
+      "name": "必应 Bing",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Bing.png"
+    },
+    {
+      "name": "Bluesky",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Bluesky.png"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChatGPT.png"
+    },
+    {
+      "name": "Claude",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Claude.png"
+    },
+    {
+      "name": "CosmosPodcast",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CosmosPodcast.png"
+    },
+    {
+      "name": "Cubox",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Cubox.png"
+    },
+    {
+      "name": "Darkroom",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Darkroom.png"
+    },
+    {
+      "name": "Dazn",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Dazn.png"
+    },
+    {
+      "name": "DeepL",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DeepL.png"
+    },
+    {
+      "name": "DeepSeek",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DeepSeek.png"
+    },
+    {
+      "name": "Discord",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Discord.png"
+    },
+    {
+      "name": "Discovery+",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Discovery%2B.png"
+    },
+    {
+      "name": "Disney+",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Disney%2B.png"
+    },
+    {
+      "name": "Drafts",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Drafts.png"
+    },
+    {
+      "name": "Emby",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Emby.png"
+    },
+    {
+      "name": "Enpass Password Manager",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Enpass_Password_Manager.png"
+    },
+    {
+      "name": "Fileball",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Fileball.png"
+    },
+    {
+      "name": "Filen",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Filen.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/GitHub.png"
+    },
+    {
+      "name": "Google",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Google.png"
+    },
+    {
+      "name": "Gemini",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/GoogleGemini.png"
+    },
+    {
+      "name": "Grok",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Grok.png"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Instagram.png"
+    },
+    {
+      "name": "Instapaper",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Instapaper.png"
+    },
+    {
+      "name": "Keep 健身",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Keep.png"
+    },
+    {
+      "name": "LINE",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Line.png"
+    },
+    {
+      "name": "Loon",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Loon.png"
+    },
+    {
+      "name": "Microsoft Copilot",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MicrosoftCopilot.png"
+    },
+    {
+      "name": "MistralAI",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MistralAI.png"
+    },
+    {
+      "name": "Netflix",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Netflix.png"
+    },
+    {
+      "name": "Nike",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Nike.png"
+    },
+    {
+      "name": "Notability",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Notability.png"
+    },
+    {
+      "name": "OKX",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/OKX.png"
+    },
+    {
+      "name": "Speedtest",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/OoklaSpeedtest.png"
+    },
+    {
+      "name": "PDF Expert",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PDF_Expert.png"
+    },
+    {
+      "name": "Paramount+",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Paramount%2B.png"
+    },
+    {
+      "name": "PayPal",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PayPal.png"
+    },
+    {
+      "name": "Picsart",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Picsart.png"
+    },
+    {
+      "name": "Pinterest",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Pinterest.png"
+    },
+    {
+      "name": "Prime Video",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PrimeVideo.png"
+    },
+    {
+      "name": "ProtonCalendar",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonCalendar.png"
+    },
+    {
+      "name": "ProtonDrive",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonDrive.png"
+    },
+    {
+      "name": "ProtonMail",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonMail.png"
+    },
+    {
+      "name": "ProtonPass",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonPass.png"
+    },
+    {
+      "name": "ProtonVPN",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonVPN.png"
+    },
+    {
+      "name": "Reddit",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Reddit.png"
+    },
+    {
+      "name": "ReelShort",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ReelShort.png"
+    },
+    {
+      "name": "Safari",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Safari.png"
+    },
+    {
+      "name": "Scanner Pro",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Scanner_Pro.png"
+    },
+    {
+      "name": "Signal",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Signal.png"
+    },
+    {
+      "name": "Sofascore",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Sofascore.png"
+    },
+    {
+      "name": "Spark",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Spark.png"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Spotify.png"
+    },
+    {
+      "name": "Talkatone",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Talkatone.png"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Telegram.png"
+    },
+    {
+      "name": "TestFlight",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TestFlight.png"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TikTok.png"
+    },
+    {
+      "name": "Tumblr",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Tumblr.png"
+    },
+    {
+      "name": "UpNote",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/UpNote.png"
+    },
+    {
+      "name": "Walmart",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Walmart.png"
+    },
+    {
+      "name": "X (Twitter)",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/X.png"
+    },
+    {
+      "name": "Xmind",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Xmind.png"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YouTube.png"
+    },
+    {
+      "name": "YouTube Music",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YouTubeMusic.png"
+    },
+    {
+      "name": "giffgaff",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/giffgaff.png"
+    },
+    {
+      "name": "Amazon 亚马逊",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Amazon.png"
+    },
+    {
+      "name": "Apple 苹果",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple.png"
+    },
+    {
+      "name": "Apple Music",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple_Music.png"
+    },
+    {
+      "name": "Apple News",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple_News.png"
+    },
+    {
+      "name": "Apple TV",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple_TV.png"
+    },
+    {
+      "name": "Apple TV+",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple_TV_Plus.png"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Facebook.png"
+    },
+    {
+      "name": "Google Drive",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Google_Drive.png"
+    },
+    {
+      "name": "HBO Max",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/HBO_Max.png"
+    },
+    {
+      "name": "Hulu",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Hulu.png"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Linkedin.png"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Microsoft.png"
+    },
+    {
+      "name": "Notion",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Notion.png"
+    },
+    {
+      "name": "OneDrive",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/OneDrive.png"
+    },
+    {
+      "name": "Steam",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Steam.png"
+    },
+    {
+      "name": "Twitch",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Twitch.png"
+    },
+    {
+      "name": "Twitter (旧标识)",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Twitter.png"
+    },
+    {
+      "name": "Vimeo",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Vimeo.png"
+    },
+    {
+      "name": "Xbox",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Xbox.png"
+    },
+    {
+      "name": "WhatsApp",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/whatsapp.png"
+    },
+    {
+      "name": "Zoom",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/zoom.png"
+    },
+    {
+      "name": "Google Chrome",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googlechrome.png"
+    },
+    {
+      "name": "Mozilla Firefox",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/firefox.png"
+    },
+    {
+      "name": "Figma",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/figma.png"
+    },
+    {
+      "name": "Dropbox",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/dropbox.png"
+    },
+    {
+      "name": "Snapchat",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/snapchat.png"
+    },
+    {
+      "name": "Gmail",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/gmail.png"
+    },
+    {
+      "name": "Google Maps",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googlemaps.png"
+    },
+    {
+      "name": "Google Photos",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googlephotos.png"
+    },
+    {
+      "name": "Google Calendar",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googlecalendar.png"
+    },
+    {
+      "name": "Google Play",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googleplay.png"
+    },
+    {
+      "name": "Airbnb",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/airbnb.png"
+    },
+    {
+      "name": "Uber",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/uber.png"
+    },
+    {
+      "name": "Booking.com",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/bookingdotcom.png"
+    },
+    {
+      "name": "eBay",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/ebay.png"
+    },
+    {
+      "name": "AliExpress",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/aliexpress.png"
+    },
+    {
+      "name": "Duolingo",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/duolingo.png"
+    },
+    {
+      "name": "GitLab",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/gitlab.png"
+    },
+    {
+      "name": "Stack Overflow",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/stackoverflow.png"
+    },
+    {
+      "name": "Wikipedia",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/wikipedia.png"
+    },
+    {
+      "name": "DuckDuckGo",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/duckduckgo.png"
+    },
+    {
+      "name": "Threads",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/threads.png"
+    },
+    {
+      "name": "Mastodon",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/mastodon.png"
+    },
+    {
+      "name": "Trello",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/trello.png"
+    },
+    {
+      "name": "Asana",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/asana.png"
+    }
+  ]
+}

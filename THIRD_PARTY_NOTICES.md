@@ -12,3 +12,14 @@ The following adapted files contain code derived from
 The upstream project is licensed under GNU GPL version 3. The complete license
 text is included at `LICENSES/GPL-3.0.txt`. These adaptations add an Egern-native
 runtime adapter and remove routes that alter paid playback capabilities.
+
+## Egern icon gallery
+
+`iconset/catalog.tsv` links to icon images from
+[luestr/IconResource](https://github.com/luestr/IconResource) and
+[Koolson/Qure](https://github.com/Koolson/Qure). Those images are served by
+their original repositories and are not copied into this repository.
+
+The PNG images in `iconset/png/` were converted from
+[Simple Icons](https://github.com/simple-icons/simple-icons) SVGs, distributed
+under CC0-1.0. Brand names and trademarks remain with their owners.

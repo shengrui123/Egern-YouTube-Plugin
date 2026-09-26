@@ -1,0 +1,1673 @@
+{
+  "name": "常用国内外 App 与网站",
+  "icons": [
+    {
+      "name": "Cloudflare 1.1.1.1",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/1.1.1.1.png"
+    },
+    {
+      "name": "铁路12306",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/12306.png"
+    },
+    {
+      "name": "123NetWorkDisk",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/123NetWorkDisk.png"
+    },
+    {
+      "name": "1919",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/1919.png"
+    },
+    {
+      "name": "2bulu",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/2bulu.png"
+    },
+    {
+      "name": "360SmartCamera",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/360SmartCamera.png"
+    },
+    {
+      "name": "36Kr",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/36Kr.png"
+    },
+    {
+      "name": "51Job",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/51Job.png"
+    },
+    {
+      "name": "555DY",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/555DY.png"
+    },
+    {
+      "name": "5EPlay",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/5EPlay.png"
+    },
+    {
+      "name": "91160",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/91160.png"
+    },
+    {
+      "name": "AIWanJuan",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/AIWanJuan.png"
+    },
+    {
+      "name": "Adobe Creative Cloud",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Adobe_Creative_Cloud.png"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Agenda.png"
+    },
+    {
+      "name": "Aiinquiry",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Aiinquiry.png"
+    },
+    {
+      "name": "AlcidaeVideo",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/AlcidaeVideo.png"
+    },
+    {
+      "name": "支付宝 Alipay",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/AliPay.png"
+    },
+    {
+      "name": "阿里云盘",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/AliYunDrive.png"
+    },
+    {
+      "name": "高德地图",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Amap.png"
+    },
+    {
+      "name": "AnyVideoBox",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/AnyVideoBox.png"
+    },
+    {
+      "name": "AppRaven",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/AppRaven.png"
+    },
+    {
+      "name": "Apple 天气",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/AppleWeather.png"
+    },
+    {
+      "name": "Asspp",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Asspp.png"
+    },
+    {
+      "name": "Audiomack",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Audiomack.png"
+    },
+    {
+      "name": "汽车之家",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/AutoHome.png"
+    },
+    {
+      "name": "AxWorkSchedule",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/AxWorkSchedule.png"
+    },
+    {
+      "name": "BabyTree",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BabyTree.png"
+    },
+    {
+      "name": "BaiCiZhan",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BaiCiZhan.png"
+    },
+    {
+      "name": "百度",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Baidu.png"
+    },
+    {
+      "name": "百度地图",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BaiduMap.png"
+    },
+    {
+      "name": "百度网盘",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BaiduNetDisk.png"
+    },
+    {
+      "name": "一刻相册",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BaiduPhoto.png"
+    },
+    {
+      "name": "百度翻译",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BaiduTranslate.png"
+    },
+    {
+      "name": "百度文库",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BaiduWenku.png"
+    },
+    {
+      "name": "Baidu input method",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Baidu_input_method.png"
+    },
+    {
+      "name": "Bcy",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Bcy.png"
+    },
+    {
+      "name": "贝壳找房",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Beike.png"
+    },
+    {
+      "name": "BestWall",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BestWall.png"
+    },
+    {
+      "name": "哔哩哔哩漫画",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BiliComic.png"
+    },
+    {
+      "name": "哔哩哔哩 Bilibili",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Bilibili.png"
+    },
+    {
+      "name": "必应 Bing",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Bing.png"
+    },
+    {
+      "name": "BitqiuPan",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BitqiuPan.png"
+    },
+    {
+      "name": "Bixin",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Bixin.png"
+    },
+    {
+      "name": "Bluesky",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Bluesky.png"
+    },
+    {
+      "name": "BodianMusic",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BodianMusic.png"
+    },
+    {
+      "name": "BooHee",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/BooHee.png"
+    },
+    {
+      "name": "CCLive",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CCLive.png"
+    },
+    {
+      "name": "CF Bible",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CF_Bible.png"
+    },
+    {
+      "name": "CSG",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CSG.png"
+    },
+    {
+      "name": "财联社",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CaiLianShe.png"
+    },
+    {
+      "name": "菜鸟",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Cainiao.png"
+    },
+    {
+      "name": "财新",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CaixinMedia.png"
+    },
+    {
+      "name": "CatEarFM",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CatEarFM.png"
+    },
+    {
+      "name": "Cece",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Cece.png"
+    },
+    {
+      "name": "唱吧",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Changba.png"
+    },
+    {
+      "name": "ChaoXingStudy",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChaoXingStudy.png"
+    },
+    {
+      "name": "ChatCam",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChatCam.png"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChatGPT.png"
+    },
+    {
+      "name": "Chelaile",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Chelaile.png"
+    },
+    {
+      "name": "ChengFenMiao",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChengFenMiao.png"
+    },
+    {
+      "name": "中国移动",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChinaMobile.png"
+    },
+    {
+      "name": "中国电信",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChinaTetlcom.png"
+    },
+    {
+      "name": "中国联通",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChinaUnicom.png"
+    },
+    {
+      "name": "Chuzhan",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Chuzhan.png"
+    },
+    {
+      "name": "Claude",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Claude.png"
+    },
+    {
+      "name": "彩云天气",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ColorfulClouds.png"
+    },
+    {
+      "name": "ColorfulCloudsPro",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ColorfulCloudsPro.png"
+    },
+    {
+      "name": "酷安",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CoolApk.png"
+    },
+    {
+      "name": "CosmosPodcast",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CosmosPodcast.png"
+    },
+    {
+      "name": "CrazyRope",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/CrazyRope.png"
+    },
+    {
+      "name": "携程",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Ctrip.png"
+    },
+    {
+      "name": "Cubox",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Cubox.png"
+    },
+    {
+      "name": "DREAME",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DREAME.png"
+    },
+    {
+      "name": "Daily",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Daily.png"
+    },
+    {
+      "name": "大麦",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Damai.png"
+    },
+    {
+      "name": "Darkroom",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Darkroom.png"
+    },
+    {
+      "name": "Dayima",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Dayima.png"
+    },
+    {
+      "name": "Dazn",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Dazn.png"
+    },
+    {
+      "name": "DeepL",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DeepL.png"
+    },
+    {
+      "name": "DeepSeek",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DeepSeek.png"
+    },
+    {
+      "name": "得物",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Dewu.png"
+    },
+    {
+      "name": "滴滴出行",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DiDi.png"
+    },
+    {
+      "name": "DidaPincheTaxi",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DidaPincheTaxi.png"
+    },
+    {
+      "name": "DigitalHeartbeat",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DigitalHeartbeat.png"
+    },
+    {
+      "name": "叮咚买菜",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DingdongMaicai.png"
+    },
+    {
+      "name": "Discord",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Discord.png"
+    },
+    {
+      "name": "Discovery+",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Discovery%2B.png"
+    },
+    {
+      "name": "Disney+",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Disney%2B.png"
+    },
+    {
+      "name": "DjDuoDuo",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DjDuoDuo.png"
+    },
+    {
+      "name": "Dlabel",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Dlabel.png"
+    },
+    {
+      "name": "Documents",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Documents.png"
+    },
+    {
+      "name": "豆瓣",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DouBan.png"
+    },
+    {
+      "name": "豆瓣阅读",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DoubanRead.png"
+    },
+    {
+      "name": "斗鱼",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Douyu.png"
+    },
+    {
+      "name": "Drafts",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Drafts.png"
+    },
+    {
+      "name": "DragonRead",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DragonRead.png"
+    },
+    {
+      "name": "DubbingShow",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DubbingShow.png"
+    },
+    {
+      "name": "DuiTang",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/DuiTang.png"
+    },
+    {
+      "name": "EasyCharge",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/EasyCharge.png"
+    },
+    {
+      "name": "EcovacsHome",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/EcovacsHome.png"
+    },
+    {
+      "name": "Elk",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Elk.png"
+    },
+    {
+      "name": "Emby",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Emby.png"
+    },
+    {
+      "name": "Enpass Password Manager",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Enpass_Password_Manager.png"
+    },
+    {
+      "name": "EtouchEcalendar",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/EtouchEcalendar.png"
+    },
+    {
+      "name": "EveryoneVideo",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/EveryoneVideo.png"
+    },
+    {
+      "name": "FC Box",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/FC_Box.png"
+    },
+    {
+      "name": "FeeyoVeryZhunLITE",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/FeeyoVeryZhunLITE.png"
+    },
+    {
+      "name": "FenBi",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/FenBi.png"
+    },
+    {
+      "name": "FenxiangLife",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/FenxiangLife.png"
+    },
+    {
+      "name": "FerrisWheel",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/FerrisWheel.png"
+    },
+    {
+      "name": "Fileball",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Fileball.png"
+    },
+    {
+      "name": "Filen",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Filen.png"
+    },
+    {
+      "name": "FinanceNews",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/FinanceNews.png"
+    },
+    {
+      "name": "FleaMarket",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/FleaMarket.png"
+    },
+    {
+      "name": "FlyerTea",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/FlyerTea.png"
+    },
+    {
+      "name": "FollowRSS",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/FollowRSS.png"
+    },
+    {
+      "name": "Foodie",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Foodie.png"
+    },
+    {
+      "name": "GaoDing",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/GaoDing.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/GitHub.png"
+    },
+    {
+      "name": "Google",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Google.png"
+    },
+    {
+      "name": "Gemini",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/GoogleGemini.png"
+    },
+    {
+      "name": "GotoCharge",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/GotoCharge.png"
+    },
+    {
+      "name": "Grok",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Grok.png"
+    },
+    {
+      "name": "Grow",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Grow.png"
+    },
+    {
+      "name": "GuideRank",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/GuideRank.png"
+    },
+    {
+      "name": "HMJC",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/HMJC.png"
+    },
+    {
+      "name": "虎扑",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/HUPU.png"
+    },
+    {
+      "name": "HanXiaoQuan",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/HanXiaoQuan.png"
+    },
+    {
+      "name": "HantingHotels",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/HantingHotels.png"
+    },
+    {
+      "name": "HappyDays",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/HappyDays.png"
+    },
+    {
+      "name": "HeartideBrainWave",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/HeartideBrainWave.png"
+    },
+    {
+      "name": "喜马拉雅",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Himalaya.png"
+    },
+    {
+      "name": "HongKongToolbar",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/HongKongToolbar.png"
+    },
+    {
+      "name": "HonorOfKingsGameHelper",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/HonorOfKingsGameHelper.png"
+    },
+    {
+      "name": "Huxiu",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Huxiu.png"
+    },
+    {
+      "name": "Hypnotist",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Hypnotist.png"
+    },
+    {
+      "name": "IT之家",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/IThome.png"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Instagram.png"
+    },
+    {
+      "name": "Instapaper",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Instapaper.png"
+    },
+    {
+      "name": "京东",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/JD.png"
+    },
+    {
+      "name": "京东金融",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/JDJinRong.png"
+    },
+    {
+      "name": "京东外卖",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/JDWaimai.png"
+    },
+    {
+      "name": "JavaScriptConverter",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/JavaScriptConverter.png"
+    },
+    {
+      "name": "JiaKaoBaoDian",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/JiaKaoBaoDian.png"
+    },
+    {
+      "name": "JiaXiaoDrive",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/JiaXiaoDrive.png"
+    },
+    {
+      "name": "Jin10Data",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Jin10Data.png"
+    },
+    {
+      "name": "Jump",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Jump.png"
+    },
+    {
+      "name": "KGRing",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KGRing.png"
+    },
+    {
+      "name": "KOOK",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KOOK.png"
+    },
+    {
+      "name": "Kantian",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Kantian.png"
+    },
+    {
+      "name": "KebidaDushu",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KebidaDushu.png"
+    },
+    {
+      "name": "Keep 健身",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Keep.png"
+    },
+    {
+      "name": "Kimi 智能助手",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Kimi.png"
+    },
+    {
+      "name": "KingdeeMyMoney",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KingdeeMyMoney.png"
+    },
+    {
+      "name": "酷狗音乐",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KuGou.png"
+    },
+    {
+      "name": "KuGouYouth",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KuGouYouth.png"
+    },
+    {
+      "name": "KuaiDi100",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KuaiDi100.png"
+    },
+    {
+      "name": "KuaiDuiZuoYe",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KuaiDuiZuoYe.png"
+    },
+    {
+      "name": "KuaiKanComic",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KuaiKanComic.png"
+    },
+    {
+      "name": "快手",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KuaiShou.png"
+    },
+    {
+      "name": "KuroBBS",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KuroBBS.png"
+    },
+    {
+      "name": "酷我音乐",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Kuwo.png"
+    },
+    {
+      "name": "KwaiVideoeditor",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/KwaiVideoeditor.png"
+    },
+    {
+      "name": "LOL Bible",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/LOL_Bible.png"
+    },
+    {
+      "name": "LZMH",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/LZMH.png"
+    },
+    {
+      "name": "LazyAudio",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/LazyAudio.png"
+    },
+    {
+      "name": "LINE",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Line.png"
+    },
+    {
+      "name": "LiveLab",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/LiveLab.png"
+    },
+    {
+      "name": "Loon",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Loon.png"
+    },
+    {
+      "name": "瑞幸咖啡",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/LuckinCoffee.png"
+    },
+    {
+      "name": "MKZ",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MKZ.png"
+    },
+    {
+      "name": "MOMO",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MOMO.png"
+    },
+    {
+      "name": "马蜂窝",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MaFengWo.png"
+    },
+    {
+      "name": "脉脉",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MaiMai.png"
+    },
+    {
+      "name": "MailMaster",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MailMaster.png"
+    },
+    {
+      "name": "芒果TV",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Mango_TV.png"
+    },
+    {
+      "name": "MeetYou",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MeetYou.png"
+    },
+    {
+      "name": "MeiRiSaiChe",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MeiRiSaiChe.png"
+    },
+    {
+      "name": "MeiShiJie",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MeiShiJie.png"
+    },
+    {
+      "name": "MeiTu",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MeiTu.png"
+    },
+    {
+      "name": "美团外卖",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MeiTuanItakeaway.png"
+    },
+    {
+      "name": "MeituMYXJ",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MeituMYXJ.png"
+    },
+    {
+      "name": "Meizhixiuxing",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Meizhixiuxing.png"
+    },
+    {
+      "name": "米家",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MiHome.png"
+    },
+    {
+      "name": "MiaoRead",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MiaoRead.png"
+    },
+    {
+      "name": "Microsoft Copilot",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MicrosoftCopilot.png"
+    },
+    {
+      "name": "MistralAI",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MistralAI.png"
+    },
+    {
+      "name": "MoeGirlWiki",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MoeGirlWiki.png"
+    },
+    {
+      "name": "墨迹天气",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MojiWeather.png"
+    },
+    {
+      "name": "MotorFans",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MotorFans.png"
+    },
+    {
+      "name": "MrHema",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MrHema.png"
+    },
+    {
+      "name": "MyFriday",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/MyFriday.png"
+    },
+    {
+      "name": "NarwelRobots",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/NarwelRobots.png"
+    },
+    {
+      "name": "NetEaseGodlike",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/NetEaseGodlike.png"
+    },
+    {
+      "name": "网易云音乐",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/NeteaseCloudMusic.png"
+    },
+    {
+      "name": "网易新闻",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/NeteaseNews.png"
+    },
+    {
+      "name": "Netflix",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Netflix.png"
+    },
+    {
+      "name": "Nicegram",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Nicegram.png"
+    },
+    {
+      "name": "Nike",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Nike.png"
+    },
+    {
+      "name": "Notability",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Notability.png"
+    },
+    {
+      "name": "NovelFM",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/NovelFM.png"
+    },
+    {
+      "name": "OKOK",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/OKOK.png"
+    },
+    {
+      "name": "OKX",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/OKX.png"
+    },
+    {
+      "name": "OnTheWay",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/OnTheWay.png"
+    },
+    {
+      "name": "OneClickCutout",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/OneClickCutout.png"
+    },
+    {
+      "name": "OneKey",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/OneKey.png"
+    },
+    {
+      "name": "Speedtest",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/OoklaSpeedtest.png"
+    },
+    {
+      "name": "Oopz",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Oopz.png"
+    },
+    {
+      "name": "OraySunlogin",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/OraySunlogin.png"
+    },
+    {
+      "name": "PDF Expert",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PDF_Expert.png"
+    },
+    {
+      "name": "PICC Insurance",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PICC_Insurance.png"
+    },
+    {
+      "name": "PICOOC",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PICOOC.png"
+    },
+    {
+      "name": "PUBGMHD Bible",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PUBGMHD_Bible.png"
+    },
+    {
+      "name": "PangguaiLife",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PangguaiLife.png"
+    },
+    {
+      "name": "Paramount+",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Paramount%2B.png"
+    },
+    {
+      "name": "PayPal",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PayPal.png"
+    },
+    {
+      "name": "PerfectWorldEsport",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PerfectWorldEsport.png"
+    },
+    {
+      "name": "PhoenixVideo",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PhoenixVideo.png"
+    },
+    {
+      "name": "PiPiXia",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PiPiXia.png"
+    },
+    {
+      "name": "Picsart",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Picsart.png"
+    },
+    {
+      "name": "PikPak",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PikPak.png"
+    },
+    {
+      "name": "拼多多",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PinDuoDuo.png"
+    },
+    {
+      "name": "Pinterest",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Pinterest.png"
+    },
+    {
+      "name": "Prime Video",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PrimeVideo.png"
+    },
+    {
+      "name": "ProCamera",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProCamera.png"
+    },
+    {
+      "name": "ProtonCalendar",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonCalendar.png"
+    },
+    {
+      "name": "ProtonDrive",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonDrive.png"
+    },
+    {
+      "name": "ProtonMail",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonMail.png"
+    },
+    {
+      "name": "ProtonPass",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonPass.png"
+    },
+    {
+      "name": "ProtonVPN",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ProtonVPN.png"
+    },
+    {
+      "name": "PuPuMall",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/PuPuMall.png"
+    },
+    {
+      "name": "QQ",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/QQ.png"
+    },
+    {
+      "name": "QQKSong",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/QQKSong.png"
+    },
+    {
+      "name": "QQ音乐",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/QQMusic.png"
+    },
+    {
+      "name": "Qbb",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Qbb.png"
+    },
+    {
+      "name": "QiDian",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/QiDian.png"
+    },
+    {
+      "name": "QiXinBao",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/QiXinBao.png"
+    },
+    {
+      "name": "QtingFM",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/QtingFM.png"
+    },
+    {
+      "name": "夸克浏览器",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/QuarkBrowser.png"
+    },
+    {
+      "name": "QuarkScanking",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/QuarkScanking.png"
+    },
+    {
+      "name": "RQrun",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/RQrun.png"
+    },
+    {
+      "name": "RedPaper",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/RedPaper.png"
+    },
+    {
+      "name": "Reddit",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Reddit.png"
+    },
+    {
+      "name": "ReelShort",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ReelShort.png"
+    },
+    {
+      "name": "RiskBird",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/RiskBird.png"
+    },
+    {
+      "name": "RoboTaxi",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/RoboTaxi.png"
+    },
+    {
+      "name": "Roborock",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Roborock.png"
+    },
+    {
+      "name": "顺丰速运",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SF-Express.png"
+    },
+    {
+      "name": "SZMetro",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SZMetro.png"
+    },
+    {
+      "name": "Safari",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Safari.png"
+    },
+    {
+      "name": "SafetyHome",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SafetyHome.png"
+    },
+    {
+      "name": "Scanner Pro",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Scanner_Pro.png"
+    },
+    {
+      "name": "SearchPicture",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SearchPicture.png"
+    },
+    {
+      "name": "SeasunJX3",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SeasunJX3.png"
+    },
+    {
+      "name": "SevenCat",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SevenCat.png"
+    },
+    {
+      "name": "ShandongSchool",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ShandongSchool.png"
+    },
+    {
+      "name": "ShopKeeperAdmin",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ShopKeeperAdmin.png"
+    },
+    {
+      "name": "ShouYinTongMerchant",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ShouYinTongMerchant.png"
+    },
+    {
+      "name": "ShoujiDesk",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ShoujiDesk.png"
+    },
+    {
+      "name": "ShuQiCenterReader",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ShuQiCenterReader.png"
+    },
+    {
+      "name": "Signal",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Signal.png"
+    },
+    {
+      "name": "SinaStock",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SinaStock.png"
+    },
+    {
+      "name": "SkyworthDigitalPicamera",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SkyworthDigitalPicamera.png"
+    },
+    {
+      "name": "SmartLife",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SmartLife.png"
+    },
+    {
+      "name": "SnailSleep",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SnailSleep.png"
+    },
+    {
+      "name": "SnowCamera",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SnowCamera.png"
+    },
+    {
+      "name": "Snowball",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Snowball.png"
+    },
+    {
+      "name": "汽水音乐",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SodaMusic.png"
+    },
+    {
+      "name": "Sofascore",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Sofascore.png"
+    },
+    {
+      "name": "SouguMyBus",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SouguMyBus.png"
+    },
+    {
+      "name": "Soul 社交",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Soul.png"
+    },
+    {
+      "name": "Spark",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Spark.png"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Spotify.png"
+    },
+    {
+      "name": "Stay",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Stay.png"
+    },
+    {
+      "name": "SuZhouCitizenCard",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/SuZhouCitizenCard.png"
+    },
+    {
+      "name": "TCLnScreen",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TCLnScreen.png"
+    },
+    {
+      "name": "TV Assistant",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TV_Assistant.png"
+    },
+    {
+      "name": "腾讯文档",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TXDocs.png"
+    },
+    {
+      "name": "Talkatone",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Talkatone.png"
+    },
+    {
+      "name": "淘宝",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Taobao.png"
+    },
+    {
+      "name": "TaobaoTravel",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TaobaoTravel.png"
+    },
+    {
+      "name": "Taopiaopiao",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Taopiaopiao.png"
+    },
+    {
+      "name": "TapTap",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TapTap.png"
+    },
+    {
+      "name": "Taqu",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Taqu.png"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Telegram.png"
+    },
+    {
+      "name": "TencentComic",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TencentComic.png"
+    },
+    {
+      "name": "腾讯视频",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Tencent_Video.png"
+    },
+    {
+      "name": "TeraBox",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TeraBox.png"
+    },
+    {
+      "name": "TestFlight",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TestFlight.png"
+    },
+    {
+      "name": "TianQiTong",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TianQiTong.png"
+    },
+    {
+      "name": "百度贴吧",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Tieba.png"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TikTok.png"
+    },
+    {
+      "name": "TmallCampus",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TmallCampus.png"
+    },
+    {
+      "name": "通义",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TongYi.png"
+    },
+    {
+      "name": "TuGuaiShou",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TuGuaiShou.png"
+    },
+    {
+      "name": "TubeMax",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/TubeMax.png"
+    },
+    {
+      "name": "Tumblr",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Tumblr.png"
+    },
+    {
+      "name": "Uki",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Uki.png"
+    },
+    {
+      "name": "航旅纵横",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Umetrip.png"
+    },
+    {
+      "name": "云闪付",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/UnionPay.png"
+    },
+    {
+      "name": "UnnooQuan",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/UnnooQuan.png"
+    },
+    {
+      "name": "UpNote",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/UpNote.png"
+    },
+    {
+      "name": "VVebo",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/VVebo.png"
+    },
+    {
+      "name": "ValorantBible",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ValorantBible.png"
+    },
+    {
+      "name": "VideoGo",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/VideoGo.png"
+    },
+    {
+      "name": "WPForum",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WPForum.png"
+    },
+    {
+      "name": "WPS Office",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WPS.png"
+    },
+    {
+      "name": "WPS Documents",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WPS_Documents.png"
+    },
+    {
+      "name": "WaCaiJiZhang",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WaCaiJiZhang.png"
+    },
+    {
+      "name": "Wacai",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Wacai.png"
+    },
+    {
+      "name": "WakeupSchedule",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WakeupSchedule.png"
+    },
+    {
+      "name": "Walmart",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Walmart.png"
+    },
+    {
+      "name": "WeatherChina",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WeatherChina.png"
+    },
+    {
+      "name": "微博",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Weibo.png"
+    },
+    {
+      "name": "Weibo intl",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Weibo_intl.png"
+    },
+    {
+      "name": "Weidian",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Weidian.png"
+    },
+    {
+      "name": "Weimai",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Weimai.png"
+    },
+    {
+      "name": "微信 WeChat",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Weixin.png"
+    },
+    {
+      "name": "微信小程序",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WeixinMiniPrograms.png"
+    },
+    {
+      "name": "WindInfo",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WindInfo.png"
+    },
+    {
+      "name": "WukongBrowser",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WukongBrowser.png"
+    },
+    {
+      "name": "WutaCamera",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/WutaCamera.png"
+    },
+    {
+      "name": "X (Twitter)",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/X.png"
+    },
+    {
+      "name": "XFuse",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/XFuse.png"
+    },
+    {
+      "name": "下厨房",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/XiaChuFang.png"
+    },
+    {
+      "name": "XiaoCan",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/XiaoCan.png"
+    },
+    {
+      "name": "小黑盒",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/XiaoHeiHe.png"
+    },
+    {
+      "name": "XiaobaiPrint",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/XiaobaiPrint.png"
+    },
+    {
+      "name": "XiaojukejiCharge",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/XiaojukejiCharge.png"
+    },
+    {
+      "name": "XiaomiSpeaker",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/XiaomiSpeaker.png"
+    },
+    {
+      "name": "Xmind",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Xmind.png"
+    },
+    {
+      "name": "迅雷",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/XunLei.png"
+    },
+    {
+      "name": "YYVoiceTool",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YYVoiceTool.png"
+    },
+    {
+      "name": "YY Voice",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YY_Voice.png"
+    },
+    {
+      "name": "央视频",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YangShiPin.png"
+    },
+    {
+      "name": "Yealico",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Yealico.png"
+    },
+    {
+      "name": "YiKaoBang",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YiKaoBang.png"
+    },
+    {
+      "name": "YiSchool",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YiSchool.png"
+    },
+    {
+      "name": "Yitian",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Yitian.png"
+    },
+    {
+      "name": "优酷",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YouKu_Video.png"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YouTube.png"
+    },
+    {
+      "name": "YouTube Music",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YouTubeMusic.png"
+    },
+    {
+      "name": "有道词典",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YoudaoDict.png"
+    },
+    {
+      "name": "有道云笔记",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YoudaoNote.png"
+    },
+    {
+      "name": "YoudaoTrans",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YoudaoTrans.png"
+    },
+    {
+      "name": "YueDanBa",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YueDanBa.png"
+    },
+    {
+      "name": "Yueyou",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Yueyou.png"
+    },
+    {
+      "name": "YunmaiScale",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/YunmaiScale.png"
+    },
+    {
+      "name": "ZAKER",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ZAKER.png"
+    },
+    {
+      "name": "ZhiLianZhaoPin",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ZhiLianZhaoPin.png"
+    },
+    {
+      "name": "ZhiPuChatGLM",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ZhiPuChatGLM.png"
+    },
+    {
+      "name": "Zhibo8",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Zhibo8.png"
+    },
+    {
+      "name": "知乎",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/Zhihu.png"
+    },
+    {
+      "name": "ZhixingHC",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ZhixingHC.png"
+    },
+    {
+      "name": "转转",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ZhuanZhuan.png"
+    },
+    {
+      "name": "ZongHeng",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ZongHeng.png"
+    },
+    {
+      "name": "ZuiYou",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ZuiYou.png"
+    },
+    {
+      "name": "饿了么",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/eleme.png"
+    },
+    {
+      "name": "giffgaff",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/giffgaff.png"
+    },
+    {
+      "name": "i4Assistant",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/i4Assistant.png"
+    },
+    {
+      "name": "iMaiCai",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/iMaiCai.png"
+    },
+    {
+      "name": "爱奇艺",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/iQiYi_Video.png"
+    },
+    {
+      "name": "iReader",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/iReader.png"
+    },
+    {
+      "name": "iReaderCityWeather",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/iReaderCityWeather.png"
+    },
+    {
+      "name": "iReaderCityZHWNL",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/iReaderCityZHWNL.png"
+    },
+    {
+      "name": "iReaderDejian",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/iReaderDejian.png"
+    },
+    {
+      "name": "iWallBiZhi",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/iWallBiZhi.png"
+    },
+    {
+      "name": "ifengNews",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ifengNews.png"
+    },
+    {
+      "name": "marki",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/marki.png"
+    },
+    {
+      "name": "miHoYoBBS",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/miHoYoBBS.png"
+    },
+    {
+      "name": "mobileClouds",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/mobileClouds.png"
+    },
+    {
+      "name": "什么值得买",
+      "url": "https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/smzdm.png"
+    },
+    {
+      "name": "Amazon 亚马逊",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Amazon.png"
+    },
+    {
+      "name": "Apple 苹果",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple.png"
+    },
+    {
+      "name": "Apple Music",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple_Music.png"
+    },
+    {
+      "name": "Apple News",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple_News.png"
+    },
+    {
+      "name": "Apple TV",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple_TV.png"
+    },
+    {
+      "name": "Apple TV+",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Apple_TV_Plus.png"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Facebook.png"
+    },
+    {
+      "name": "Google Drive",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Google_Drive.png"
+    },
+    {
+      "name": "HBO Max",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/HBO_Max.png"
+    },
+    {
+      "name": "Hulu",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Hulu.png"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Linkedin.png"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Microsoft.png"
+    },
+    {
+      "name": "Notion",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Notion.png"
+    },
+    {
+      "name": "OneDrive",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/OneDrive.png"
+    },
+    {
+      "name": "Steam",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Steam.png"
+    },
+    {
+      "name": "Twitch",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Twitch.png"
+    },
+    {
+      "name": "Twitter (旧标识)",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Twitter.png"
+    },
+    {
+      "name": "Vimeo",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Vimeo.png"
+    },
+    {
+      "name": "Xbox",
+      "url": "https://raw.githubusercontent.com/Koolson/Qure/b16b260625f873266f6a6a9b88710132774997b8/IconSet/Color/Xbox.png"
+    },
+    {
+      "name": "WhatsApp",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/whatsapp.png"
+    },
+    {
+      "name": "Zoom",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/zoom.png"
+    },
+    {
+      "name": "Google Chrome",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googlechrome.png"
+    },
+    {
+      "name": "Mozilla Firefox",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/firefox.png"
+    },
+    {
+      "name": "Figma",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/figma.png"
+    },
+    {
+      "name": "Dropbox",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/dropbox.png"
+    },
+    {
+      "name": "Snapchat",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/snapchat.png"
+    },
+    {
+      "name": "Gmail",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/gmail.png"
+    },
+    {
+      "name": "Google Maps",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googlemaps.png"
+    },
+    {
+      "name": "Google Photos",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googlephotos.png"
+    },
+    {
+      "name": "Google Calendar",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googlecalendar.png"
+    },
+    {
+      "name": "Google Play",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/googleplay.png"
+    },
+    {
+      "name": "Airbnb",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/airbnb.png"
+    },
+    {
+      "name": "Uber",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/uber.png"
+    },
+    {
+      "name": "Booking.com",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/bookingdotcom.png"
+    },
+    {
+      "name": "eBay",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/ebay.png"
+    },
+    {
+      "name": "AliExpress",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/aliexpress.png"
+    },
+    {
+      "name": "Duolingo",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/duolingo.png"
+    },
+    {
+      "name": "GitLab",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/gitlab.png"
+    },
+    {
+      "name": "Stack Overflow",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/stackoverflow.png"
+    },
+    {
+      "name": "Wikipedia",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/wikipedia.png"
+    },
+    {
+      "name": "DuckDuckGo",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/duckduckgo.png"
+    },
+    {
+      "name": "Threads",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/threads.png"
+    },
+    {
+      "name": "Mastodon",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/mastodon.png"
+    },
+    {
+      "name": "Trello",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/trello.png"
+    },
+    {
+      "name": "Asana",
+      "url": "https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/png/asana.png"
+    }
+  ]
+}

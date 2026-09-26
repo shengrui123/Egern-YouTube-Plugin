@@ -2,6 +2,10 @@
 
 本仓库收录 Egern 原生 YAML 模组。
 
+## 图标集
+
+新增 [常用国内外 App 与网站图标集](iconset/README.md)，包含 417 个图标，提供可直接添加到 Egern 图标库的[全量订阅](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/iconset/Egern-Icons-All.json)，以及国内、海外分库。图标集只提供图标，不修改网络规则。
+
 ## 模组列表
 
 | 模组 | 功能 | 订阅地址 |
