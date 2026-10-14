@@ -21,6 +21,7 @@
 | 哔哩哔哩去广告 | 清理开屏、信息流、动态、评论、搜索与直播间广告 | [Bilibili.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Bilibili.RemoveAds.Egern.yaml) |
 | 哔哩哔哩漫画去广告 | 清理开屏、横幅、推荐内容并精简首页及“我的”页面 | [BiliComic.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/BiliComic.RemoveAds.Egern.yaml) |
 | Spotify 去广告与界面修复 | 去除已知广告请求、恢复列表并提供界面设置 | [Spotify.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Spotify.RemoveAds.Egern.yaml) |
+| Telegram 短链重定向 | 将公开短链、私有邀请和消息链接改写为指定客户端的深链 | [Telegram.Redirect.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Telegram.Redirect.Egern.yaml) |
 | 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
 | 红果短剧去广告 | 拦截开屏及应用内已知广告请求与素材 | [Hongguo.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Hongguo.RemoveAds.Egern.yaml) |
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
@@ -31,6 +32,16 @@
 1. 在 Egern 的「工具 → 模组」中添加上表对应的 YAML 原始文件 URL。
 2. 安装并完全信任 Egern 的 MITM CA 证书。
 3. 启用模组后重新打开相应 App。
+
+## Telegram 短链重定向
+
+直接导入：
+
+```text
+https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Telegram.Redirect.Egern.yaml
+```
+
+在模组参数中将 `APP_SCHEME` 设置为目标 Telegram 客户端注册的 URL Scheme（不含 `://`）。默认 `tg` 使用 Telegram 通用深链。模组覆盖公开用户名、公开频道消息、`t.me/+邀请码`、`t.me/joinchat/邀请码` 和 `/c/频道ID/消息ID` 链接。启用 HTTPS 解密并信任 Egern CA 后生效。当前规则不保留短链上的查询参数；目标客户端也必须支持对应的 Telegram 深链。请按目标客户端支持情况选择参数和链接类型。
 
 ## 米家开屏去广告
 
