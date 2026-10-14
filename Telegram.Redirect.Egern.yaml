@@ -1,5 +1,5 @@
 name: Telegram 短链重定向
-description: 将 Telegram 公开短链和私有邀请短链转换为可配置客户端的 URL Scheme。
+description: 适用于安装了多个不同 Telegram 客户端的用户，用于在指定客户端中打开公开或私有群组及频道的 Telegram 短链。
 author: shengrui123
 homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
 icon: paperplane.fill

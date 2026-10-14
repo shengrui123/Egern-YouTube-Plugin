@@ -21,7 +21,7 @@
 | 哔哩哔哩去广告 | 清理开屏、信息流、动态、评论、搜索与直播间广告 | [Bilibili.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Bilibili.RemoveAds.Egern.yaml) |
 | 哔哩哔哩漫画去广告 | 清理开屏、横幅、推荐内容并精简首页及“我的”页面 | [BiliComic.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/BiliComic.RemoveAds.Egern.yaml) |
 | Spotify 去广告与界面修复 | 去除已知广告请求、恢复列表并提供界面设置 | [Spotify.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Spotify.RemoveAds.Egern.yaml) |
-| Telegram 短链重定向 | 将公开短链、私有邀请和消息链接改写为指定客户端的深链 | [Telegram.Redirect.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Telegram.Redirect.Egern.yaml) |
+| Telegram 短链重定向 | 适用于安装多个 Telegram 客户端的用户，在指定客户端中打开公开或私有群组及频道短链 | [Telegram.Redirect.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Telegram.Redirect.Egern.yaml) |
 | 豆瓣开屏去广告 | 拦截豆瓣自有及腾讯优量汇开屏广告 | [Douban.AdBlock.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Douban.AdBlock.Egern.yaml) |
 | 红果短剧去广告 | 拦截开屏及应用内已知广告请求与素材 | [Hongguo.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Hongguo.RemoveAds.Egern.yaml) |
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
