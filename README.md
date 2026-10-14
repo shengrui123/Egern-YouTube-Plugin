@@ -41,7 +41,7 @@
 https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Telegram.Redirect.Egern.yaml
 ```
 
-在模组参数中将 `APP_SCHEME` 设置为目标 Telegram 客户端注册的 URL Scheme（不含 `://`）。默认 `tg` 使用 Telegram 通用深链。模组覆盖公开用户名、公开频道消息、`t.me/+邀请码`、`t.me/joinchat/邀请码` 和 `/c/频道ID/消息ID` 链接。启用 HTTPS 解密并信任 Egern CA 后生效。当前规则不保留短链上的查询参数；目标客户端也必须支持对应的 Telegram 深链。请按目标客户端支持情况选择参数和链接类型。
+在模组参数中将 `APP_SCHEME` 设置为要使用的 Telegram 客户端注册的 URL Scheme（不含 `://`）。默认 `tg` 是通用深链；若设备安装了多个客户端，请改成目标客户端专用的 Scheme，以明确指定打开的应用。模组覆盖公开用户名、公开消息、网页预览短链、`t.me/+邀请码`、`t.me/joinchat/邀请码` 和 `/c/频道ID/消息ID` 链接；公开及消息短链的查询参数会透传。启用 HTTPS 解密并信任 Egern CA 后生效。目标客户端需支持相应的 Telegram 深链格式。
 
 ## 米家开屏去广告
 

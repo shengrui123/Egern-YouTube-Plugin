@@ -22,16 +22,51 @@ url_rewrites:
     location: "{{{APP_SCHEME}}}://join?invite=$1"
     status_code: 302
 
-  # 私有频道/群组消息链接：/c/<channel_id>/<message_id>。
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/c/(\d+)/(\d+)/?(?:\?.*)?$'
+  # 私有频道/群组消息链接：/c/<channel_id>/<message_id>，保留原查询参数。
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/c/(\d+)/(\d+)/(\d+)/?\?(.+)$'
+    location: "{{{APP_SCHEME}}}://privatepost?channel=$1&thread=$2&post=$3&$4"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/c/(\d+)/(\d+)/(\d+)/?$'
+    location: "{{{APP_SCHEME}}}://privatepost?channel=$1&thread=$2&post=$3"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/c/(\d+)/(\d+)/?\?(.+)$'
+    location: "{{{APP_SCHEME}}}://privatepost?channel=$1&post=$2&$3"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/c/(\d+)/(\d+)/?$'
     location: "{{{APP_SCHEME}}}://privatepost?channel=$1&post=$2"
     status_code: 302
 
-  # 公开用户名短链及频道消息短链。
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/(\d+)/?(?:\?.*)?$'
+  # Telegram 网页预览短链 /s/<username>[/<message_id>] 也在客户端中打开原频道。
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/s/([A-Za-z0-9_]{5,32})/(\d+)/?\?(.+)$'
+    location: "{{{APP_SCHEME}}}://resolve?domain=$1&post=$2&$3"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/s/([A-Za-z0-9_]{5,32})/(\d+)/?$'
     location: "{{{APP_SCHEME}}}://resolve?domain=$1&post=$2"
     status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/?(?:\?.*)?$'
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/s/([A-Za-z0-9_]{5,32})/?\?(.+)$'
+    location: "{{{APP_SCHEME}}}://resolve?domain=$1&$2"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/s/([A-Za-z0-9_]{5,32})/?$'
+    location: "{{{APP_SCHEME}}}://resolve?domain=$1"
+    status_code: 302
+
+  # 公开用户名和频道消息短链；将查询参数透传给目标客户端。
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/(\d+)/(\d+)/?\?(.+)$'
+    location: "{{{APP_SCHEME}}}://resolve?domain=$1&thread=$2&post=$3&$4"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/(\d+)/(\d+)/?$'
+    location: "{{{APP_SCHEME}}}://resolve?domain=$1&thread=$2&post=$3"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/(\d+)/?\?(.+)$'
+    location: "{{{APP_SCHEME}}}://resolve?domain=$1&post=$2&$3"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/(\d+)/?$'
+    location: "{{{APP_SCHEME}}}://resolve?domain=$1&post=$2"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/?\?(.+)$'
+    location: "{{{APP_SCHEME}}}://resolve?domain=$1&$2"
+    status_code: 302
+  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/?$'
     location: "{{{APP_SCHEME}}}://resolve?domain=$1"
     status_code: 302
 
