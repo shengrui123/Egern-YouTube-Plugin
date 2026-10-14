@@ -4,71 +4,21 @@ author: shengrui123
 homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
 icon: paperplane.fill
 
-# 填写目标客户端注册的 URL Scheme，不要包含 ://。
-# 默认 tg 使用 Telegram 通用深链；如需指定其他客户端，请在模组参数中修改。
-compat_arguments:
-  APP_SCHEME: tg
+env_schema:
+  CLIENT:
+    name: 客户端
+    description: 指定跳转的客户端
+    default_value: tg
+    options:
+      - tg
+      - sg
 
-compat_arguments_desc: >-
-  APP_SCHEME 是目标 Telegram 客户端注册的 URL Scheme，例如 tg。
-  具体值请以目标客户端的文档为准；客户端需支持对应的 Telegram 深链。
-
-url_rewrites:
-  # 私有频道/群组邀请链接：t.me/+hash 或 t.me/joinchat/hash。
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/\+([A-Za-z0-9_-]+)/?(?:\?.*)?$'
-    location: "{{{APP_SCHEME}}}://join?invite=$1"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/joinchat/([A-Za-z0-9_-]+)/?(?:\?.*)?$'
-    location: "{{{APP_SCHEME}}}://join?invite=$1"
-    status_code: 302
-
-  # 私有频道/群组消息链接：/c/<channel_id>/<message_id>，保留原查询参数。
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/c/(\d+)/(\d+)/(\d+)/?\?(.+)$'
-    location: "{{{APP_SCHEME}}}://privatepost?channel=$1&thread=$2&post=$3&$4"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/c/(\d+)/(\d+)/(\d+)/?$'
-    location: "{{{APP_SCHEME}}}://privatepost?channel=$1&thread=$2&post=$3"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/c/(\d+)/(\d+)/?\?(.+)$'
-    location: "{{{APP_SCHEME}}}://privatepost?channel=$1&post=$2&$3"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/c/(\d+)/(\d+)/?$'
-    location: "{{{APP_SCHEME}}}://privatepost?channel=$1&post=$2"
-    status_code: 302
-
-  # Telegram 网页预览短链 /s/<username>[/<message_id>] 也在客户端中打开原频道。
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/s/([A-Za-z0-9_]{5,32})/(\d+)/?\?(.+)$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1&post=$2&$3"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/s/([A-Za-z0-9_]{5,32})/(\d+)/?$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1&post=$2"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/s/([A-Za-z0-9_]{5,32})/?\?(.+)$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1&$2"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/s/([A-Za-z0-9_]{5,32})/?$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1"
-    status_code: 302
-
-  # 公开用户名和频道消息短链；将查询参数透传给目标客户端。
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/(\d+)/(\d+)/?\?(.+)$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1&thread=$2&post=$3&$4"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/(\d+)/(\d+)/?$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1&thread=$2&post=$3"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/(\d+)/?\?(.+)$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1&post=$2&$3"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/(\d+)/?$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1&post=$2"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/?\?(.+)$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1&$2"
-    status_code: 302
-  - match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/([A-Za-z0-9_]{5,32})/?$'
-    location: "{{{APP_SCHEME}}}://resolve?domain=$1"
-    status_code: 302
+scriptings:
+  - http_request:
+      name: Telegram 短链客户端重定向
+      match: '^https?://(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)/'
+      script_url: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts/telegram.redirect.request.js
+      timeout: 5
 
 mitm:
   hostnames:
