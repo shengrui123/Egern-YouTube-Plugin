@@ -195,32 +195,28 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Alipay.M
 
 ## 高德地图去广告
 
-模组参考 RuCu6、kelv1n1n 与可莉维护的 Loon 插件转换，使用 Egern 原生规则、Body Rewrite、Map Local 和 `ctx` 响应脚本。
+直接导入：[Amap.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Amap.RemoveAds.Egern.yaml)。
 
-直接导入：
-
-```text
-https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Amap.RemoveAds.Egern.yaml
-```
+以可莉 Loon 插件 `2026-10-20 12:06:08` 为快照，于 2026-10-21 核对 Egern 官方规范。模组使用 7 条原生 URL Rewrite 与 11 条响应 JQ，将原插件同一 URL 的 16 项响应操作按顺序合并；两份外部 JQ 已内嵌，运行时无需下载脚本或 JQ 文件。MITM 仅配置 `m5.amap.com`、`ai.amap.com`、`m5-zb.amap.com`、`center.amap.com`、`sns.amap.com` 与 `info.amap.com`。
 
 当前处理范围：
 
-- 移除开屏、搜索热词与搜索结果推广、路线规划和导航结束页推广、酒店及附近页推广。
-- 清理首页卡片、活动图层、天气与消息推广，并精简“我的”页面。
-- 清空底部“AI / 长按说话”与“打车”入口相关的 AOCS 远程配置，并兼容新版 `updatable` 接口后缀。
-- AOCS `updatable` 保留原始响应并交由脚本定点清理，避免 Map Local 提前返回空对象而跳过 AI / 打车配置处理。
-- 清理打车页营销皮肤、优惠弹窗、红点、天气图标和订单推荐卡片。
-- 保留登录卡片、继续导航、常去地点、关联车辆位置和订单卡片等源脚本明确保留的功能。
-- 底栏是高德 App 的原生控件，Egern 只能清空它依赖的服务端配置，无法直接修改视图树；若高德改为本地强制展示，Tab 可能仍保留但对应远程功能不再下发。
-- 域名及接口规则沿用源插件的精确范围；尚未进行 Egern / 高德地图真机验证。导航或打车前建议先验证常用路线，请勿同时启用其他高德去广告模组。
+- 拦截开屏、首页素材与 AI 推荐问题、打车营销资源、榜单与搜索营销接口，返回 HTTP 200 空 JSON。
+- 清理 AOCS 图层中的广告配置，以及运动、导航结束、搜索历史、打车、收藏夹、附近推荐等内嵌 JSON 字符串中的推广字段。
+- 按上游保留清单精简“我的”页面、打车工具箱及工具列表，清理搜索快捷入口角标、搜索建议与附近活动。
+- 地点详情页按上游清单保留地点信息、地图、导航入口、评价、服务、资质及本店预订，过滤其他模块及其区域、锚点引用；未知的新模块也可能被隐藏。
+
+为适配缺少字段的部分响应，内嵌 JQ 为嵌套字符串更新增加类型检查；解析错误、意外类型或无输出时保留该项原始内容，其他可处理配置继续净化。新版按当前上游规则替换仓库旧版的广域规则与脚本调用；不再额外封锁统计域名、清空天气/消息接口或递归删除未知推广字段。旧 `scripts/amap.response.js` 保留供缓存的旧配置使用，当前模组不再引用它。
+
+安装并完全信任 Egern 的 MITM CA，启用 HTTPS 解密后重启高德。已验证 YAML 解析、URL 匹配范围、全部 JQ 编译及合成响应，尚未进行 Egern / 高德真机导入、定位、导航与打车验证。请勿与处理相同接口的高德模组重复启用；配置只能修改网络响应，不能保证删除 App 本地固化的底部入口。
 
 来源与规范：
 
-- 参考插件：https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
-- 原脚本来源：https://github.com/RuCu6/Loon
-- Egern 模组：https://egernapp.com/docs/configuration/modules/
-- Egern URL 重写与 Map Local：https://egernapp.com/docs/configuration/url_rewrites/ 与 https://egernapp.com/docs/configuration/example/
-- Egern 脚本与 API：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
+- [原始 Loon 插件](https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx)与[可莉](https://github.com/luestr/ProxyResource)。
+- 外部 JQ：[updatable.jq](https://kelee.one/Resource/JQLang/Amap/updatable.jq)、[search_poi_detail.jq](https://kelee.one/Resource/JQLang/Amap/search_poi_detail.jq)。源文件 SHA-256 与适配说明见 [amap-upstream.json](amap-upstream.json)。
+- Egern：[模组](https://egernapp.com/docs/configuration/modules/)、[URL Rewrite](https://egernapp.com/docs/configuration/url_rewrites/)、[响应 JQ](https://egernapp.com/docs/configuration/body_rewrites/)。
+
+开发检查（Python 3、Ruby 标准 YAML 库和 jq）：`python3 -m unittest discover -s tests -p test_amap.py`。
 
 ## 彩云天气净化
 

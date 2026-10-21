@@ -1,0 +1,16 @@
+{
+  "source": "https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx",
+  "upstream_date": "2026-10-20 12:06:08",
+  "converted_on": "2026-10-21",
+  "sha256": "17aea055bd7ad50be3507d4d39db8b4191167be7c30ea5018db427d83e765eb0",
+  "jq_files": {
+    "https://kelee.one/Resource/JQLang/Amap/updatable.jq": "dba0888e3e4491e282ce58e547e3a4125f6fd96057d0d5eaf878450fa40bd647",
+    "https://kelee.one/Resource/JQLang/Amap/search_poi_detail.jq": "7def102b752835f8cbe63167b75dbe19997cb532f7e35d8283de4eeb5f2d4eb6"
+  },
+  "adaptation": [
+    "Group same-URL response rewrites in source order.",
+    "Embed both upstream JQ resources.",
+    "Guard nested string updates and preserve input on errors or empty results.",
+    "Use exactly the six upstream MITM hostnames."
+  ]
+}
