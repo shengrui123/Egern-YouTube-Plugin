@@ -10,6 +10,7 @@
 
 | 模组 | 功能 | 订阅地址 |
 | --- | --- | --- |
+| 微信小程序去广告 | 过滤常用小程序广告、横幅与推广，纯原生规则，无远端脚本 | [WeChat.MiniPrograms.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/WeChat.MiniPrograms.RemoveAds.Egern.yaml) |
 | 12306 去广告 | 过滤应用内推广及开屏广告字段 | [12306.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/12306.RemoveAds.Egern.yaml) |
 | 支付宝小程序开屏去广告 | 清空小程序广告推荐并拦截广告管理素材 | [Alipay.MiniApp.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Alipay.MiniApp.SplashAds.Egern.yaml) |
 | 淘宝闪购开屏去广告 | 拦截已知竖屏开屏图片素材 | [Taobao.Flash.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Taobao.Flash.SplashAds.Egern.yaml) |
@@ -42,6 +43,20 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Telegram
 ```
 
 模组设置中提供“客户端”下拉选项：`tg` 跳转 Telegram，`sg` 跳转 Swiftgram。请选择设备已安装的目标客户端。模组覆盖公开用户名、公开消息、网页预览短链、`t.me/+邀请码`、`t.me/joinchat/邀请码` 和 `/c/频道ID/消息ID` 链接，并将消息短链的查询参数透传给客户端。启用 HTTPS 解密并信任 Egern CA 后生效。
+
+## 微信小程序去广告
+
+直接导入：[WeChat.MiniPrograms.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/WeChat.MiniPrograms.RemoveAds.Egern.yaml)。
+
+按可莉原插件 `2026-10-02 13:57:49` 快照转换，并于 2026-10-21 核对 Egern 官方文档。包含 6 条精确域名拒绝、112 条 URL Rewrite 和 19 条响应 JQ；原有 12 支 JavaScript 的处理逻辑已改写为原生 JQ，无需下载或执行远端脚本。`reject_dict(200)` 对应 `http://reject-dict/`，`reject(404)` 对应 `http://reject/`，保留大小写不敏感匹配。
+
+覆盖企迈、丰巢、邮政、顺丰、中通、餐饮点单、出行、酒店、共享充电、微信充值等已收录接口。企迈与 EMS 保留内嵌 JSON 字符串格式；其他规则删除已知广告字段，或按原逻辑清空推广数据。结构变化造成 JQ 执行错误时保留原始 JSON。MITM 仅包含当前规则实际涉及的 90 个主机，移除了源文件中没有对应规则的主机；极兔与小电整主机匹配增加主机边界，避免命中形似域名。
+
+安装并完全信任 Egern 的 MITM CA，启用 HTTPS 解密后，退出并重新进入小程序。已验证 YAML 解析、正则范围及全部 JQ 的合成样本；尚未在 Egern / 微信真机验证，无法保证覆盖缓存或新增广告。原插件部分规则范围较宽，例如极兔整主机、部分首页、图片目录、推荐及服务列表；可能隐藏正常入口。茶颜悦色沿用上游的远端替换图片，该图片仍依赖可莉站点可用。请勿与处理相同接口的模组重复启用。
+
+来源：[原始 Loon 插件](https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx)、[可莉](https://github.com/luestr/ProxyResource)。插件及 12 支脚本的下载内容 SHA-256 见 [wechat-miniprograms-upstream.json](wechat-miniprograms-upstream.json)。规范：[Egern 模组](https://egernapp.com/docs/configuration/modules/)、[URL Rewrite](https://egernapp.com/docs/configuration/url_rewrites/)、[响应 JQ](https://egernapp.com/docs/configuration/body_rewrites/)。
+
+开发检查（Python 3、Ruby 标准 YAML 库和 jq）：`python3 -m unittest discover -s tests -p test_wechat_miniprograms.py`。
 
 ## 米家开屏去广告
 

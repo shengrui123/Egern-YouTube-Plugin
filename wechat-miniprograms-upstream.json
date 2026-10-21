@@ -1,0 +1,20 @@
+{
+  "source": "https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx",
+  "upstream_date": "2026-10-02 13:57:49",
+  "converted_on": "2026-10-21",
+  "sha256": "a3e17aa9fa533f226fab0d178a3f1a7061f9833348af757dc14c03ef17469f20",
+  "scripts": {
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js": "8453c73e9412fd99396afbfea14e7d26c46936da1650603b6f2433cda18cbf2c",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js": "2208e4945d8781e5bc9d20a436fc141629a7e4dc9fd516f9fe917196010cf5bc",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js": "a10131a49267ce2cdd17c7c4d783eb64c8aa943b83ee4dcadb846ccd2c4bbb1b",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js": "e25457f43eacfbf27ca8229445e69f60f7562ece723b5ebaf07969c0ebf75e1c",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js": "3d57d6ae9070934eef3513e2a4b640fad9dd5076fbbc6c471994bd3d790068f1",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js": "4b7f857caa810648f7be584e916ceffb9c12dd3b2ce7766ed5bd605646e2a4d1",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js": "dc9a1915eed8f6f760a8f3a03f5e2f5a0f346373693ae4ac2e0c5dbd90fd46b3",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js": "8664e7a22b21aaa8546ec167e3a43fee7ebd2c00552a126212720b09a4819bf8",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js": "c765215071712fa0c0c0ef3719263fff81d4a1ce0189f8bc0861aa721657a44c",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js": "5d6f163842ce53eb034fa01c244f6482fedd2f5d56b7c206c25d6f11c21e805f",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js": "ab1ca9af4dd9b294f585335856de51d6df2b61c31d9a3d1982a5b091355da25a",
+    "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js": "bd0f4e67ae73fdd083b10c1e802912d8c9ade1b2b14a0dead865d7af0b90d991"
+  }
+}
