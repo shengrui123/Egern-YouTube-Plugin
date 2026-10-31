@@ -1,0 +1,130 @@
+# Egern native module; checked against official documentation on 2026-10-31.
+# SCRIPT_BASE must point to the bundled converted scripts.
+name: YouTube Enhance · gholts · Egern
+description: YouTube 去廣告、背景播放、畫中畫、最高 4 倍速及介面精簡。需配套四支 Egern 原生腳本，配套腳本網址已設定，可直接匯入。
+author: gholts / Maasea；Egern API 適配
+homepage: https://github.com/gholts/surge
+icon: play.rectangle.fill
+compat_arguments:
+  SCRIPT_BASE: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Gholts.Egern/scripts
+compat_arguments_desc: 配套 Egern scripts 的完整 HTTPS 目錄或 Egern 可存取的本機目錄，不含末尾斜線。不可填原始 Surge 腳本目錄。
+env_schema:
+  block_upload:
+    name: 移除上傳分頁
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  block_shorts:
+    name: 移除 Shorts 分頁
+    default_value: 'false'
+    options:
+    - 'true'
+    - 'false'
+  auto_hd:
+    name: 偏好最高可用畫質
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  block_games:
+    name: 移除首頁遊戲
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  block_vertical_live:
+    name: 移除首頁直向直播
+    default_value: 'false'
+    options:
+    - 'true'
+    - 'false'
+  jump_ahead:
+    name: 啟用 Jump Ahead 按鈕
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  block_store:
+    name: 移除商店與商品卡片
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  block_ai:
+    name: 移除 AI 摘要與提問入口
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  on_the_go:
+    name: 啟用行動控制項
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+url_rewrites:
+- match: ^https://www\.youtube\.com/(pagead|pcs)/
+  location: http://reject/
+- match: ^https://s\.youtube\.com/api/stats/ads
+  location: http://reject/
+scriptings:
+- http_request:
+    name: YouTube 廣告插播
+    match: ^https://youtubei\.googleapis\.com/youtubei/v1/player/ad_break(?:\?.*)?$
+    script_url: '{{{SCRIPT_BASE}}}/request.js'
+    timeout: 30
+    body_required: false
+- http_response:
+    name: YouTube 增強響應
+    match: ^https://youtubei\.googleapis\.com/youtubei/v1/(?:navigation/resolve_url|browse|next|player|search|reel/reel_watch_sequence|guide|account/get_setting|get_watch)(?:\?.*)?$
+    script_url: '{{{SCRIPT_BASE}}}/response.js'
+    timeout: 30
+    body_required: true
+    binary_body: true
+    max_size: 16777216
+- http_response:
+    name: YouTube 播放金鑰
+    match: ^https://youtubei\.googleapis\.com/youtubei/v1/(?:config|log_event)(?:\?.*)?$
+    script_url: '{{{SCRIPT_BASE}}}/key.js'
+    timeout: 30
+    body_required: true
+    binary_body: true
+    max_size: 16777216
+- http_response:
+    name: YouTube UMP 播放資料
+    match: ^https?://[\w-]+\.googlevideo\.com/initplayback(?:\?.*)?$
+    script_url: '{{{SCRIPT_BASE}}}/ump.js'
+    timeout: 30
+    body_required: true
+    binary_body: true
+    max_size: 16777216
+- http_request:
+    name: YouTube 播放初始化
+    match: ^https?://[\w-]+\.googlevideo\.com/initplayback(?:\?.*)?$
+    script_url: '{{{SCRIPT_BASE}}}/request.js'
+    timeout: 30
+    body_required: true
+    binary_body: true
+    max_size: 16777216
+- http_request:
+    name: YouTube 自動畫質
+    match: ^https?://[\w-]+\.googlevideo\.com/videoplayback(?:\?.*)?$
+    script_url: '{{{SCRIPT_BASE}}}/request.js'
+    timeout: 30
+    body_required: true
+    binary_body: true
+    max_size: 16777216
+- http_request:
+    name: YouTube 事件請求
+    match: ^https://youtubei\.googleapis\.com/youtubei/v1/log_event(?:\?.*)?$
+    script_url: '{{{SCRIPT_BASE}}}/request.js'
+    timeout: 30
+    body_required: false
+mitm:
+  hostnames:
+    includes:
+    - '*.googlevideo.com'
+    - youtubei.googleapis.com
+    - www.youtube.com
+    - s.youtube.com

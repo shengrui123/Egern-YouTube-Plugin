@@ -28,6 +28,16 @@
 | YouTube & Music 增强 | YouTube 去广告、底栏精简、字幕及歌词翻译 | [YouTube.Enhance.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Enhance.Egern.yaml) |
 | Apple Intelligence 分流 | Apple Intelligence、PCC、Siri 与系统搜索分流，同时排除 HTTPS 解密 | [AppleIntelligence.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/AppleIntelligence.Egern.yaml) |
 
+## YouTube 增強 · gholts（獨立分類）
+
+此分類採用 gholts/surge 的 YouTube Enhance 核心，與上方 YouTube & Music 增強分開維護。請擇一啟用，避免處理相同接口。
+
+| 模組 | 功能 | 匯入網址 |
+| --- | --- | --- |
+| YouTube Enhance · gholts | 去廣告、背景播放、畫中畫、自動畫質、UMP 處理與九個介面開關 | [YouTube.Gholts.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.Gholts.Egern/YouTube.Gholts.Egern.yaml) |
+
+配套四支 Egern 原生腳本的遠端網址已設定，新增上述 YAML 原始網址即可使用。需安裝並信任 MITM 憑證。已通過模擬測試，尚未進行 Egern 真機驗證。詳見[安裝及功能說明](YouTube.Gholts.Egern/README.md)。
+
 ## 安装
 
 1. 在 Egern 的「工具 → 模组」中添加上表对应的 YAML 原始文件 URL。
