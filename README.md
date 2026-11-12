@@ -361,32 +361,19 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/BiliComi
 
 ## Spotify 去广告与界面修复
 
-模组参考 001ProMax 发布的 Loon 插件，使用 Egern 原生规则、Header 模式 URL Rewrite 与二进制响应脚本。原插件脚本还包含 Premium、离线播放和许可证等付费权益伪装；本适配只保留广告标志与两个界面设置，没有复制这些付费权益修改。
-
 直接导入：
 
 ```text
 https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Spotify.RemoveAds.Egern.yaml
 ```
 
-功能与限制：
+此实验性模组拦截已知广告请求，把歌手和专辑页面请求的平台参数由 iPhone 改为 iPad，并改写 Bootstrap / User Customization 的部分 Protobuf 配置。默认尝试调整随机播放与按需播放标志，可在模组设置中关闭「嘗試任意選歌與關閉強制隨機」。也可调整创建按钮与 Apple 接力设置。
 
-- 拦截 `/pendragon/` 广告请求，并阻止 Spotify 域名使用 QUIC，使 HTTPS 处理能够命中。
-- 将歌手页的 iPhone 平台请求透明改写为 iPad 平台，用于恢复歌手和专辑列表展示。
-- 在 Bootstrap / User Customization Protobuf 响应中仅设置 `ads=false`。
-- 可在模组设置中选择移除底栏创建按钮，以及启用或关闭 Apple 设备接力；修改后通常需要重新登录 Spotify。
-- 不解锁 Premium、离线播放、任意点播或其他付费功能，也不会改变真实订阅状态。
-- Spotify 接口或 Protobuf 结构变化后可能失效；尚未进行 Egern / Spotify 真机验证。
-- 请勿与其他处理相同 Spotify 接口的去广告或账号修改模组同时启用。
+安装并信任 Egern 的 MITM CA 证书、启用 HTTPS 解密，然后重启 Spotify；参数变更后可能需要重新登录。请勿与处理相同 Spotify 接口的其他模组同时启用。
 
-来源与规范：
+**限制：**目前只验证配置和合成数据，尚未在 Egern / Spotify 真机验证；无法保证拦截歌曲之间的插播，也无法保证任意选歌、无限切歌或关闭强制随机。客户端配置改写不会改变真实订阅或服务端授权。Protobuf 重新编码可能丢失未知字段并导致登录或播放异常，出现问题时请停用模组。最高音质仍须在 Spotify 内按账号可用选项设置；参考覆写文件明确提示不能设为超高。
 
-- 参考插件：https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx
-- 原作者：https://github.com/001ProMax
-- Egern 模组与设置：https://egernapp.com/docs/configuration/modules/
-- Egern 规则：https://egernapp.com/docs/configuration/rules/
-- Egern URL 重写：https://egernapp.com/docs/configuration/url_rewrites/
-- Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
+参考：[Stash 覆写文件](https://clashios.app/stoverride/lodepuly_vpn_tool/Spotify_remove_ads)（2024 年；所引用的 GitLab 脚本目前返回 403，无法核对其内容）、[相关的历史脚本镜像](https://github.com/Moli-X/Resources/tree/main/Loon/Spotify/Test)、[app2smile 播放配置脚本](https://github.com/app2smile/rules/blob/master/js/spotify-proto.js)、[原 Egern 适配来源](https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx) 和 [Egern URL Rewrite 文档](https://egernapp.com/docs/configuration/url_rewrites/)。历史镜像不能证明与该 GitLab 脚本完全一致。
 
 ## 豆瓣开屏去广告
 

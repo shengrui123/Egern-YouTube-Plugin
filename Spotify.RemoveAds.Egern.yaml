@@ -1,7 +1,6 @@
 name: Spotify 去广告与界面修复
 description: >-
-  移除已知播放广告请求，恢复歌手与专辑列表展示，并提供底栏创建按钮和 Apple 接力设置。
-  不包含 Premium、离线播放或其他付费权益伪装。
+  实验性过滤部分广告，并尝试解除随机播放与点播限制；实际效果取决于 Spotify 服务端。
 author: 001ProMax（原插件）；shengrui123（Egern 安全适配）
 homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
 open_url: https://apps.apple.com/app/id324684580
@@ -13,6 +12,11 @@ compat_arguments_desc: SCRIPT_BASE 为配套脚本目录，无末尾斜杠；可
 
 # default_value 只作为设置页占位提示；配套脚本内另有相同的默认值。
 env_schema:
+  experimentalPlayback:
+    name: 嘗試任意選歌與關閉強制隨機
+    description: 實驗性修改播放配置；不保證解除服務端限制，修改後可能需要重新登入。
+    default_value: 'true'
+    options: ['true', 'false']
   removeCreateTab:
     name: 移除底栏创建按钮
     description: 修改后需要重新登录 Spotify 才可能生效。
@@ -37,9 +41,9 @@ rules:
 url_rewrites:
   - match: '^https://(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?/pendragon/(?:.*)?$'
     location: http://reject-dict/
-  # Header 模式：透明改写为 iPad 平台响应，用于恢复歌手与专辑列表展示。
-  - match: '^https://(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?/artistview/v1/artist/(.*)&platform=iphone(.*)$'
-    location: 'https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad$2'
+  # 保留原主机及所有查询参数，调整歌手和专辑页面的平台参数。
+  - match: '^(https://(?:[\w-]+-spclient|spclient\.wg)\.spotify\.com(?::443)?/(?:artistview/v1/artist|album-entity-view/v2/album)/[^?]*\?(?:[^&]*&)*?)platform=iphone(&.*|$)$'
+    location: '$1platform=ipad$2'
 
 scriptings:
   - http_response:
