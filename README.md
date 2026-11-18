@@ -17,6 +17,7 @@
 | 高德地图去广告 | 清理开屏、搜索、路线、导航及打车页推广 | [Amap.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Amap.RemoveAds.Egern.yaml) |
 | 米家开屏去广告 | 清空 `openingBanner` 开屏推荐响应 | [MiHome.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/MiHome.SplashAds.Egern.yaml) |
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
+| 中国移动开屏去广告 | 拦截已知的 `startInit` 开屏请求 | [ChinaMobile.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaMobile.SplashAds.Egern.yaml) |
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
 | 航旅纵横净化 | 清理开屏、推广、榜单及部分会员入口 | [Umetrip.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml) |
 | 哔哩哔哩去广告 | 清理开屏、信息流、动态、评论、搜索与直播间广告 | [Bilibili.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Bilibili.RemoveAds.Egern.yaml) |
@@ -253,6 +254,12 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.C
 - Egern 模组：https://egernapp.com/docs/configuration/modules/
 - Egern 脚本：https://egernapp.com/docs/configuration/scriptings/ 与 https://egernapp.com/docs/javascript-api/
 - Egern URL 重写：https://egernapp.com/docs/configuration/url_rewrites/
+
+## 中国移动开屏去广告
+
+在 Egern「工具 → 模组」中添加并启用[模组原始链接](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaMobile.SplashAds.Egern.yaml)。开启 HTTPS 解密，安装并完全信任 Egern 的 CA 证书，然后彻底退出并重新打开中国移动 App。
+
+模组在两个已知主机上精确匹配 `/biz-orange/DN/init/startInit`，命中时返回 HTTP 200 空响应。匹配范围经过离线测试，当前 iOS 版的开屏效果尚待真机验证。接口依据见 [client.app.coc.10086.cn 规则](https://github.com/Crazy-Z7/AdGuard/blob/main/Ad.conf)和 [clientaccess.10086.cn 规则](https://github.com/dalaochai/ss/blob/main/AD.sgmodule)。
 
 ## 中国联通净化
 

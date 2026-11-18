@@ -1,0 +1,15 @@
+name: 中国移动开屏去广告
+description: 对中国移动 App 已知的 startInit 开屏请求返回 HTTP 200 空响应。
+author: shengrui123
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+icon: https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChinaMobile.png
+
+url_rewrites:
+  - match: '^https?://(?:client\.app\.coc|clientaccess)\.10086\.cn/biz-orange/DN/init/startInit/?(?:\?.*)?$'
+    location: http://reject-200/
+
+mitm:
+  hostnames:
+    includes:
+      - client.app.coc.10086.cn
+      - clientaccess.10086.cn
