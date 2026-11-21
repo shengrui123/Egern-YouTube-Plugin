@@ -1,0 +1,9 @@
+{
+  "upstream": "https://github.com/NSRingo/WeatherKit",
+  "version": "v3.3.2",
+  "scripts_modified": false,
+  "sha256": {
+    "weatherkit.response.js": "ce1db90d77c44fce972db0c2e319845fc1d6a276d41d772c0294882e59d7f999",
+    "weatherkit.request.js": "da05af299dd2172e1c25a2bff349cdda268114ee7fc43340cc48da29c76ea033"
+  }
+}
