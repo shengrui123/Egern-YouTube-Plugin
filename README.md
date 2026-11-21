@@ -17,7 +17,7 @@
 | 高德地图去广告 | 清理开屏、搜索、路线、导航及打车页推广 | [Amap.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Amap.RemoveAds.Egern.yaml) |
 | 米家开屏去广告 | 清空 `openingBanner` 开屏推荐响应 | [MiHome.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/MiHome.SplashAds.Egern.yaml) |
 | 彩云天气净化 | 去除广告与推广，保留旧版会员响应伪装 | [CaiYun.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.Clean.Egern.yaml) |
-| 中国移动开屏去广告 | 拦截已知开屏接口及资源目录 | [ChinaMobile.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaMobile.SplashAds.Egern.yaml) |
+| 中国移动开屏去广告 | Yuheng 加密响应适配，清理开屏、首页与弹窗广告 | [ChinaMobile.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaMobile.SplashAds.Egern.yaml) |
 | 中国联通净化 | 屏蔽广告与营销请求，精简首页及我的页面 | [ChinaUnicom.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaUnicom.Clean.Egern.yaml) |
 | 航旅纵横净化 | 清理开屏、推广、榜单及部分会员入口 | [Umetrip.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Umetrip.Clean.Egern.yaml) |
 | 哔哩哔哩去广告 | 清理开屏、信息流、动态、评论、搜索与直播间广告 | [Bilibili.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Bilibili.RemoveAds.Egern.yaml) |
@@ -257,17 +257,11 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.C
 
 ## 中国移动开屏去广告
 
-在 Egern 模组中添加并启用[模组原始链接](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaMobile.SplashAds.Egern.yaml)。开启 HTTPS 解密，安装并完全信任 Egern CA 证书，然后彻底退出并重新打开中国移动 App。已安装的订阅需要手动更新，模组描述应显示“补充版 v2”。
+[导入 / 更新模组](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaMobile.SplashAds.Egern.yaml)，描述应显示“v3 · Yuheng 加密响应适配版”。安装并完全信任 Egern CA，开启 HTTPS 解密，停用其他中国移动去广告模组后重启 App。
 
-2026-11-21 收到中国移动 12.5.7 仍显示开屏广告的反馈，尚未取得该版本的请求记录，因此本次补充不代表已修复或验证兼容 12.5.7。
+本版根据用户提供的 [Yuheng 原脚本](https://github.com/Yuheng0101/X/blob/main/Scripts/ChinaMobile/NoAds.js)转换：对 x-pen 1/2 的加密响应解密、清理开屏字段后重新加密，并保留原脚本的首页及弹窗净化。配套脚本地址已配置，固定上游快照与原作者声明一并保留。移除 v2 的启动空响应和资源目录拦截，避免抢先截断脚本需要的响应。
 
-- 对 `client.app.coc.10086.cn`、`clientaccess.10086.cn`、`app.10086.cn` 的 `/biz-orange/DN/init/startInit` 返回 HTTP 200 空 JSON。
-- 对 `client.app.coc.10086.cn`、`app.10086.cn` 的 `/biz-orange/DN/explorePage/getAdverList` 返回 HTTP 200 空 JSON；该接口也可能影响探索页推广。
-- 保留 `res.app.coc.10086.cn/qwhdcdn_cmcc-cs_cn/prd-mgcenter/` 目录的 HTTP 200 空响应；该目录可能包含非开屏素材。
-
-已通过 YAML 解析与 URL 正反例检查，尚未进行 Egern 真机验证。若仍显示广告，请提供启动时 Egern 记录的广告域名和路径，以及 HTTPS 解密状态；去除手机号、Cookie、Token 和查询参数。若只有域名而没有完整路径，需先确认目标请求是否成功解密。已缓存素材可尝试在 App 内清理缓存后重启。
-
-参考：[启动及广告列表路径](https://github.com/luoxmc/loon/blob/main/Plugins/ChinaMobile.lpx)、[空 JSON 响应规则](https://github.com/m4a1dada/Loon-Plugin-Collection/blob/main/ChinaMobile.plugin)、[资源目录规则](https://github.com/aoomee/Loon-Adblock-Plugins/blob/main/plugins/cmcc.plugin)。
+两种加密格式的实际打包脚本已通过合成样本测试，覆盖开屏、下拉、悬浮、首页区域、办理横幅、弹窗及异常放行。尚未进行 Egern / 中国移动 12.5.7 真机验证，不能据此保证开屏已解决。详细范围、安装及原作者使用声明见 [适配说明](ChinaMobile.Yuheng.Egern/README.md)。
 
 ## 中国联通净化
 

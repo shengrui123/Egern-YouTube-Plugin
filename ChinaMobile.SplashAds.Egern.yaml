@@ -1,26 +1,25 @@
-name: 中国移动开屏去广告
-description: 补充版 v2：对已知启动及广告列表接口返回空 JSON，拦截 prd-mgcenter 素材。需开启 HTTPS 解密并信任 Egern CA；可能影响其他推广素材，尚未真机验证。
-author: shengrui123
+name: 中国移动去广告 · Yuheng
+description: v3 · Yuheng 加密响应适配版。解密并清理开屏、首页和弹窗广告后重新加密。需开启 HTTPS 解密并完全信任 Egern CA；尚未在中国移动 12.5.7 真机验证。
+author: Yuheng0101；shengrui123（Egern 适配）
 homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
 icon: https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChinaMobile.png
-
-# 更新：2026-11-21；保留旧接口，补充资源目录规则。
-# 资源规则参考：https://github.com/aoomee/Loon-Adblock-Plugins/blob/main/plugins/cmcc.plugin
-# prd-mgcenter 整个目录均会被拦截，可能影响该目录中的非开屏素材。
-# 接口参考：https://github.com/luoxmc/loon/blob/main/Plugins/ChinaMobile.lpx
-# 空 JSON 参考：https://github.com/m4a1dada/Loon-Plugin-Collection/blob/main/ChinaMobile.plugin
+# 固定上游快照，保留原作者声明；不在运行时下载或执行新的上游代码。
+# https://github.com/Yuheng0101/X/blob/main/Scripts/ChinaMobile/NoAds.js
+# 勿与返回空启动响应的旧规则并用，否则响应脚本无法获得真实加密数据。
 url_rewrites:
-  - match: '(?i)^https?://res\.app\.coc\.10086\.cn/qwhdcdn_cmcc-cs_cn/prd-mgcenter/'
+  - match: '^https?://h\.app\.coc\.10086\.cn/biz-orange/DH/popupWindow/getDetail/?(?:\?.*)?$'
     location: http://reject-200/
-  - match: '^https?://(?:client\.app\.coc|clientaccess|app)\.10086\.cn/biz-orange/DN/init/startInit/?(?:\?.*)?$'
-    location: http://reject-dict/
-  - match: '^https?://(?:client\.app\.coc|app)\.10086\.cn/biz-orange/DN/explorePage/getAdverList/?(?:\?.*)?$'
-    location: http://reject-dict/
-
+scriptings:
+  - http_response:
+      name: 中国移动 Yuheng 加密响应净化
+      match: '^https?://(?:client\.app\.coc\.10086\.cn/biz-orange/DN/(?:init/startInit|newTopPullSecond/getNewTopPullList|emotionMarket/getEmotionMarketNew|friendShake/getShakeList)|h\.app\.coc\.10086\.cn/biz-orange/DH/(?:homeArea/getTopAreaList|navigation/getNavigationNewInfo))/?(?:\?.*)?$'
+      script_url: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts/chinamobile.yuheng.response.js
+      body_required: true
+      max_size: 4194304
+      timeout: 15
+      update_interval: 86400
 mitm:
   hostnames:
     includes:
-      - res.app.coc.10086.cn
       - client.app.coc.10086.cn
-      - clientaccess.10086.cn
-      - app.10086.cn
+      - h.app.coc.10086.cn
