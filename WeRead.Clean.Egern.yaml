@@ -1,0 +1,19 @@
+name: 微信读书精简 · Maasea
+description: 去除底栏红点、阅读页小圈子及评论分享数字，隐藏个人页部分提示。按 Maasea 原模组启用范围转换；不是通用广告拦截。需信任 Egern CA，尚未真机验证。
+author: Maasea；shengrui123（Egern 适配）
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+# Source: https://github.com/Maasea/sgmodule/blob/master/WeRead.sgmodule
+# 原模组未启用脚本中的 discoverfeed/new、discoverfeed/get；此处保持一致。
+scriptings:
+  - http_response:
+      name: 微信读书响应精简
+      match: 'https:\/\/i\.weread\.qq\.com\/(book\/(reading[sS]tat|chapterReview)|user\/profile|groups\/readerEntrance|review\/list|mobileSync)'
+      script_url: https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/scripts/weread.response.js
+      body_required: true
+      max_size: 4194304
+      timeout: 10
+      update_interval: 86400
+mitm:
+  hostnames:
+    includes:
+      - i.weread.qq.com

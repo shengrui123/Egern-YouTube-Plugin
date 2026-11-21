@@ -1,0 +1,12 @@
+{
+  "snapshot": "2026-11-22",
+  "sha256": {
+    "WeRead.sgmodule": "38f5cf3b3b7cd4c63b1e5b0e5b7b54248f6018a4389c2a0a4d775d083c226a63",
+    "weread.js": "6431690b99d3063532c50c7777af1fa47fd1e00e5262c45c63a371864dee9189"
+  },
+  "pattern": "https:\\/\\/i\\.weread\\.qq\\.com\\/(book\\/(reading[sS]tat|chapterReview)|user\\/profile|groups\\/readerEntrance|review\\/list|mobileSync)",
+  "disabled_upstream_script_branches": [
+    "discoverfeed/new",
+    "discoverfeed/get"
+  ]
+}

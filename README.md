@@ -10,6 +10,7 @@
 
 | 模组 | 功能 | 订阅地址 |
 | --- | --- | --- |
+| 微信读书精简 · Maasea | 底栏红点、阅读社交提示、评论及个人页精简 | [WeRead.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/WeRead.Clean.Egern.yaml) |
 | 哈啰净化 · ZenmoFeiShi | 广告、推荐流、我的页及车主会员推广净化 | [HelloBike.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/HelloBike.Clean.Egern.yaml) |
 | 美团去广告 · ZenmoFeiShi | 开屏、底栏、购物车、搜索及推荐净化 | [Meituan.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Meituan.RemoveAds.Egern.yaml) |
 | 微信小程序去广告 | 过滤常用小程序广告、横幅与推广，纯原生规则，无远端脚本 | [WeChat.MiniPrograms.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/WeChat.MiniPrograms.RemoveAds.Egern.yaml) |
@@ -464,3 +465,9 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.
 [导入模组](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/HelloBike.Clean.Egern.yaml)。完整转换用户提供的 [helloobike.snippet](https://github.com/ZenmoFeiShi/Qx/blob/main/helloobike.snippet) 与 easybike-ad.js，含 4 条广告拦截、5 条脚本规则和 10 个 MITM 主机。
 
 保留动态密钥捕获、本机存储、加密响应处理与本地样式模板，净化弹窗、推荐流、借钱及会员推广、我的页和车主接单列表推广。需信任 Egern CA 并开启 HTTPS 解密；首次捕获动态密钥后请重新进入首页和我的页面。已通过加密样本及原脚本对照测试，尚未真机验证。详见[适配范围、安装及限制](HelloBike.Egern/README.md)。
+
+## 微信读书精简 · Maasea
+
+[导入模组](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/WeRead.Clean.Egern.yaml)。按用户提供的 [WeRead.sgmodule](https://github.com/Maasea/sgmodule/blob/master/WeRead.sgmodule) 与 weread.js 转换为 Egern 原生响应脚本，去除底栏红点、小圈子、阅读社交统计及部分个人页提示。review/list 会返回空评论列表，功能不限于去广告。配套脚本中的发现页分支未在源模组启用，本版保持一致。
+
+开启 HTTPS 解密并完全信任 Egern CA 后重启微信读书。原作者测试环境还关闭了通知和微信好友权限。已通过 7 个接口变体的原脚本对照测试，尚未真机验证；详细功能及限制见[适配说明](WeRead.Egern/README.md)。
