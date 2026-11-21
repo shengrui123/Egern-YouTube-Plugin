@@ -10,6 +10,7 @@
 
 | 模组 | 功能 | 订阅地址 |
 | --- | --- | --- |
+| 美团去广告 · ZenmoFeiShi | 开屏、底栏、购物车、搜索及推荐净化 | [Meituan.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Meituan.RemoveAds.Egern.yaml) |
 | 微信小程序去广告 | 过滤常用小程序广告、横幅与推广，纯原生规则，无远端脚本 | [WeChat.MiniPrograms.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/WeChat.MiniPrograms.RemoveAds.Egern.yaml) |
 | 12306 去广告 | 过滤应用内推广及开屏广告字段 | [12306.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/12306.RemoveAds.Egern.yaml) |
 | 支付宝小程序开屏去广告 | 清空小程序广告推荐并拦截广告管理素材 | [Alipay.MiniApp.SplashAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Alipay.MiniApp.SplashAds.Egern.yaml) |
@@ -450,3 +451,9 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.
 ## Telegram 更新通知
 
 `main` 分支上线新模组或更新现有模组及其配套脚本时，GitHub Actions 会自动向 Telegram 频道发布通知。详见 [TELEGRAM.md](TELEGRAM.md)。
+
+## 美团去广告 · ZenmoFeiShi
+
+[导入模组](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Meituan.RemoveAds.Egern.yaml)。按用户提供的 [MT.snippet](https://github.com/ZenmoFeiShi/Qx/blob/main/MT.snippet) 与 MT.js 完整转换，保留全部 46 条域名/IP 规则、2 条 URL 拦截和 8 个响应处理接口，使用 Egern 原生 JavaScript API。
+
+覆盖开屏素材、购物车横幅、底栏视频与小团入口、我的页推荐、两个推荐流场景、搜索默认词/热词/AI 气泡及助手技能配置。需开启 HTTPS 解密并完全信任 Egern CA；配套脚本自动加载。上游标注美团 12.67.403，完整转换包含 HTTPDNS、Shark 和固定 IP 拦截，可能影响相关服务。已通过原脚本对照测试，尚未真机验证。详见[完整说明与源快照](Meituan.Egern/README.md)。

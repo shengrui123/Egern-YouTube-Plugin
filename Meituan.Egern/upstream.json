@@ -1,0 +1,16 @@
+{
+  "source_version": "MT.snippet 2026.10.25; App 12.67.403",
+  "sha256": {
+    "MT.snippet": "e2c72b6676ad026b4f3c67f70614d7c2c7dafe0343c2dae4bb80b2762bf4e07a",
+    "MT.js": "9a48981f5d1cdac2d7c72c8f1164752ce712113eaf687aeeba2829e78c66308a"
+  },
+  "counts": {
+    "domain": 12,
+    "domain_wildcard": 1,
+    "ip_cidr": 29,
+    "ip_cidr6": 4
+  },
+  "rewrites": 2,
+  "response_routes": 8,
+  "mitm_hosts": 7
+}
