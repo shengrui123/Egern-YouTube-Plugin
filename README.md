@@ -257,9 +257,17 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/CaiYun.C
 
 ## 中国移动开屏去广告
 
-在 Egern「工具 → 模组」中添加并启用[模组原始链接](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaMobile.SplashAds.Egern.yaml)。开启 HTTPS 解密，安装并完全信任 Egern 的 CA 证书，然后彻底退出并重新打开中国移动 App。
+在 Egern 模组中添加并启用[模组原始链接](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/ChinaMobile.SplashAds.Egern.yaml)。开启 HTTPS 解密，安装并完全信任 Egern CA 证书，然后彻底退出并重新打开中国移动 App。已安装的订阅需要手动更新，模组描述应显示“补充版 v2”。
 
-模组在两个已知主机上精确匹配 `/biz-orange/DN/init/startInit`，并拦截 `res.app.coc.10086.cn/qwhdcdn_cmcc-cs_cn/prd-mgcenter/` 资源目录，命中时返回 HTTP 200 空响应。资源规则参考 [aoomee 中国移动插件](https://github.com/aoomee/Loon-Adblock-Plugins/blob/main/plugins/cmcc.plugin)，于 2026-11-21 补充；整个目录也可能包含其他推广素材，可能影响非开屏图片。无需额外脚本。已通过 YAML 解析及 URL 正反例匹配检查。若仍显示旧广告，可在 App 内清理缓存后重启。匹配范围经过离线测试，当前 iOS 版的开屏效果尚待真机验证。接口依据见 [client.app.coc.10086.cn 规则](https://github.com/Crazy-Z7/AdGuard/blob/main/Ad.conf)和 [clientaccess.10086.cn 规则](https://github.com/dalaochai/ss/blob/main/AD.sgmodule)。
+2026-11-21 收到中国移动 12.5.7 仍显示开屏广告的反馈，尚未取得该版本的请求记录，因此本次补充不代表已修复或验证兼容 12.5.7。
+
+- 对 `client.app.coc.10086.cn`、`clientaccess.10086.cn`、`app.10086.cn` 的 `/biz-orange/DN/init/startInit` 返回 HTTP 200 空 JSON。
+- 对 `client.app.coc.10086.cn`、`app.10086.cn` 的 `/biz-orange/DN/explorePage/getAdverList` 返回 HTTP 200 空 JSON；该接口也可能影响探索页推广。
+- 保留 `res.app.coc.10086.cn/qwhdcdn_cmcc-cs_cn/prd-mgcenter/` 目录的 HTTP 200 空响应；该目录可能包含非开屏素材。
+
+已通过 YAML 解析与 URL 正反例检查，尚未进行 Egern 真机验证。若仍显示广告，请提供启动时 Egern 记录的广告域名和路径，以及 HTTPS 解密状态；去除手机号、Cookie、Token 和查询参数。若只有域名而没有完整路径，需先确认目标请求是否成功解密。已缓存素材可尝试在 App 内清理缓存后重启。
+
+参考：[启动及广告列表路径](https://github.com/luoxmc/loon/blob/main/Plugins/ChinaMobile.lpx)、[空 JSON 响应规则](https://github.com/m4a1dada/Loon-Plugin-Collection/blob/main/ChinaMobile.plugin)、[资源目录规则](https://github.com/aoomee/Loon-Adblock-Plugins/blob/main/plugins/cmcc.plugin)。
 
 ## 中国联通净化
 
