@@ -10,6 +10,7 @@
 
 | 模组 | 功能 | 订阅地址 |
 | --- | --- | --- |
+| 哈啰净化 · ZenmoFeiShi | 广告、推荐流、我的页及车主会员推广净化 | [HelloBike.Clean.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/HelloBike.Clean.Egern.yaml) |
 | 美团去广告 · ZenmoFeiShi | 开屏、底栏、购物车、搜索及推荐净化 | [Meituan.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Meituan.RemoveAds.Egern.yaml) |
 | 微信小程序去广告 | 过滤常用小程序广告、横幅与推广，纯原生规则，无远端脚本 | [WeChat.MiniPrograms.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/WeChat.MiniPrograms.RemoveAds.Egern.yaml) |
 | 12306 去广告 | 过滤应用内推广及开屏广告字段 | [12306.RemoveAds.Egern.yaml](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/12306.RemoveAds.Egern.yaml) |
@@ -457,3 +458,9 @@ https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/YouTube.
 [导入模组](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/Meituan.RemoveAds.Egern.yaml)。按用户提供的 [MT.snippet](https://github.com/ZenmoFeiShi/Qx/blob/main/MT.snippet) 与 MT.js 完整转换，保留全部 46 条域名/IP 规则、2 条 URL 拦截和 8 个响应处理接口，使用 Egern 原生 JavaScript API。
 
 覆盖开屏素材、购物车横幅、底栏视频与小团入口、我的页推荐、两个推荐流场景、搜索默认词/热词/AI 气泡及助手技能配置。需开启 HTTPS 解密并完全信任 Egern CA；配套脚本自动加载。上游标注美团 12.67.403，完整转换包含 HTTPDNS、Shark 和固定 IP 拦截，可能影响相关服务。已通过原脚本对照测试，尚未真机验证。详见[完整说明与源快照](Meituan.Egern/README.md)。
+
+## 哈啰净化 · ZenmoFeiShi
+
+[导入模组](https://raw.githubusercontent.com/shengrui123/Egern-YouTube-Plugin/main/HelloBike.Clean.Egern.yaml)。完整转换用户提供的 [helloobike.snippet](https://github.com/ZenmoFeiShi/Qx/blob/main/helloobike.snippet) 与 easybike-ad.js，含 4 条广告拦截、5 条脚本规则和 10 个 MITM 主机。
+
+保留动态密钥捕获、本机存储、加密响应处理与本地样式模板，净化弹窗、推荐流、借钱及会员推广、我的页和车主接单列表推广。需信任 Egern CA 并开启 HTTPS 解密；首次捕获动态密钥后请重新进入首页和我的页面。已通过加密样本及原脚本对照测试，尚未真机验证。详见[适配范围、安装及限制](HelloBike.Egern/README.md)。

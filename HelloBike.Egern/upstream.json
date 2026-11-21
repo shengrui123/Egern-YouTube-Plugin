@@ -1,0 +1,11 @@
+{
+  "source_update": "2026-11-06",
+  "snapshot": "2026-11-21",
+  "sha256": {
+    "helloobike.snippet": "a37cfc3976938c0fadcfa26d407d96d4d6ca299c253eee76648f97c199dec195",
+    "easybike-ad.js": "48bd012c7a98c804c6a4d0608ffe00034bec7ed8c52921f96c451968fece53dd"
+  },
+  "rejects": 4,
+  "script_routes": 5,
+  "mitm_hosts": 10
+}
