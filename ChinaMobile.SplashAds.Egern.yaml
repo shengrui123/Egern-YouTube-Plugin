@@ -1,5 +1,5 @@
 name: 中国移动开屏去广告
-description: 拦截已知 startInit 开屏接口及 prd-mgcenter 资源目录，返回 HTTP 200 空响应。需开启 HTTPS 解密并信任 Egern CA；资源目录可能包含其他推广素材，尚未真机验证。
+description: 补充版 v2：对已知启动及广告列表接口返回空 JSON，拦截 prd-mgcenter 素材。需开启 HTTPS 解密并信任 Egern CA；可能影响其他推广素材，尚未真机验证。
 author: shengrui123
 homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
 icon: https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab9449ee1ae1feb7be2f2b5b/App_icon/120px/ChinaMobile.png
@@ -7,11 +7,15 @@ icon: https://raw.githubusercontent.com/luestr/IconResource/173d41fe13f74590ab94
 # 更新：2026-11-21；保留旧接口，补充资源目录规则。
 # 资源规则参考：https://github.com/aoomee/Loon-Adblock-Plugins/blob/main/plugins/cmcc.plugin
 # prd-mgcenter 整个目录均会被拦截，可能影响该目录中的非开屏素材。
+# 接口参考：https://github.com/luoxmc/loon/blob/main/Plugins/ChinaMobile.lpx
+# 空 JSON 参考：https://github.com/m4a1dada/Loon-Plugin-Collection/blob/main/ChinaMobile.plugin
 url_rewrites:
   - match: '(?i)^https?://res\.app\.coc\.10086\.cn/qwhdcdn_cmcc-cs_cn/prd-mgcenter/'
     location: http://reject-200/
-  - match: '^https?://(?:client\.app\.coc|clientaccess)\.10086\.cn/biz-orange/DN/init/startInit/?(?:\?.*)?$'
-    location: http://reject-200/
+  - match: '^https?://(?:client\.app\.coc|clientaccess|app)\.10086\.cn/biz-orange/DN/init/startInit/?(?:\?.*)?$'
+    location: http://reject-dict/
+  - match: '^https?://(?:client\.app\.coc|app)\.10086\.cn/biz-orange/DN/explorePage/getAdverList/?(?:\?.*)?$'
+    location: http://reject-dict/
 
 mitm:
   hostnames:
@@ -19,3 +23,4 @@ mitm:
       - res.app.coc.10086.cn
       - client.app.coc.10086.cn
       - clientaccess.10086.cn
+      - app.10086.cn
