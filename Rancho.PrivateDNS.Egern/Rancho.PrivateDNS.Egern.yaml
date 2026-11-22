@@ -1,0 +1,30 @@
+name: rancho 私有 DNS 优化
+description: 将截图中的 6 个指定域名交由两台私有 DoH 并行解析，采用最快响应。无需脚本或 MitM 证书。
+author: shengrui123
+icon: network
+# 从用户截图手动转写；未保留原订阅的 user_id 和 signature。
+# 仅针对原有六个完整域名生效，不扩展到其子域名。
+dns:
+  upstreams:
+    rancho_private_dns:
+      - https://js-stream-4346a-txcdn.apishimano.club/292f105ae785d1845a8799971ac3a14b/dns-query
+      - https://api-79879a-stream-cdn.digitalpet.store/cd5fc87b78fa44d36792c463871cbcb2/dns-query
+  forward:
+    - domain:
+        match: jsetn-jspthyjkl256cdn.api.myinba55.com
+        value: rancho_private_dns
+    - domain:
+        match: js-apicdn-ptsshik8851.cdn.inba996.com
+        value: rancho_private_dns
+    - domain:
+        match: 6778dak.iukiukonb.llsaiaini.xyz
+        value: rancho_private_dns
+    - domain:
+        match: cdnnft-api88jsxn-nft.llsaiaini.xyz
+        value: rancho_private_dns
+    - domain:
+        match: 59679-hqwda-globalasia-js.dowsteamapi.store
+        value: rancho_private_dns
+    - domain:
+        match: 14646-dasga-europeandemerica-api.dowsteamapi.store
+        value: rancho_private_dns
