@@ -1,0 +1,25 @@
+name: Spotify 广告域名过滤
+description: 拒绝已知 Spotify 广告域名的连接，无需 HTTPS 解密。与音乐共用域名的插播广告仍可能播放。音质和选歌范围由 Spotify 账号决定。
+homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
+
+# 广告主机参考 https://github.com/Isaaker/Spotify-AdsList/blob/main/Lists/adguard.txt
+# 精确匹配以避免影响同一 CDN 上的普通音乐和视频。
+rules:
+  - domain:
+      match: ad.audio-ak.cdn.spotify.com
+      policy: REJECT
+  - domain:
+      match: ad.video-ak.cdn.spotify.com
+      policy: REJECT
+  - domain:
+      match: ads-akp.spotify.com
+      policy: REJECT
+  - domain:
+      match: ads-fa.spotify.com
+      policy: REJECT
+  - domain:
+      match: ads-sp-lon.cdn.spotify.com
+      policy: REJECT
+  - domain:
+      match: ads-fa.spotify.ads.pubmatic.com
+      policy: REJECT
