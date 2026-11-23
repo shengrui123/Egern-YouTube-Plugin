@@ -1,6 +1,6 @@
 name: Spotify 去广告与界面修复
 description: >-
-  实验性过滤部分广告，并尝试解除随机播放与点播限制；实际效果取决于 Spotify 服务端。
+  过滤已知广告投放域名和播放中的音视频广告素材，并尝试解除随机播放与点播限制；实际效果取决于 Spotify 服务端。
 author: 001ProMax（原插件）；shengrui123（Egern 安全适配）
 homepage: https://github.com/shengrui123/Egern-YouTube-Plugin
 open_url: https://apps.apple.com/app/id324684580
@@ -28,8 +28,36 @@ env_schema:
     default_value: 'true'
     options: ['true', 'false']
 
-# 强制 Spotify 回退到可被 HTTPS 解密处理的 TCP 连接。
 rules:
+  # 精确匹配广告投放和插播素材主机，避免拦截通用音乐 CDN。
+  - domain:
+      match: ad.audio-ak.cdn.spotify.com
+      policy: REJECT
+  - domain:
+      match: ad.video-ak.cdn.spotify.com
+      policy: REJECT
+  - domain:
+      match: ads-akp.spotify.com
+      policy: REJECT
+  - domain:
+      match: ads-fa.spotify.com
+      policy: REJECT
+  - domain:
+      match: ads-sp-lon.cdn.spotify.com
+      policy: REJECT
+  - domain:
+      match: ads-fa.spotify.ads.pubmatic.com
+      policy: REJECT
+  - domain:
+      match: audio-ads.spotify.com
+      policy: REJECT
+  - domain:
+      match: mp3ad.scdn.co
+      policy: REJECT
+  - domain:
+      match: adstudio-assets.scdn.co
+      policy: REJECT
+  # 强制 Spotify 回退到可被 HTTPS 解密处理的 TCP 连接。
   - and:
       match:
         - domain_suffix:
